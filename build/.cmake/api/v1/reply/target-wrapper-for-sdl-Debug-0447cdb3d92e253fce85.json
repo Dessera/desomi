@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "sdl-wrap"
+			"path" : "wrapper-for-sdl"
 		}
 	],
 	"backtrace" : 1,
@@ -52,7 +52,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/./Core"
+					"path" : "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/./Core"
 				}
 			],
 			"language" : "CXX",
@@ -75,7 +75,7 @@
 			]
 		}
 	],
-	"id" : "sdl-wrap::@6890427a1f51a3e7e1df",
+	"id" : "wrapper-for-sdl::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -101,8 +101,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "sdl-wrap",
-	"nameOnDisk" : "sdl-wrap",
+	"name" : "wrapper-for-sdl",
+	"nameOnDisk" : "wrapper-for-sdl",
 	"paths" : 
 	{
 		"build" : ".",

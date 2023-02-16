@@ -55,7 +55,7 @@
 					[
 						0
 					],
-					"name" : "sdl-wrap",
+					"name" : "wrapper-for-sdl",
 					"targetIndexes" : 
 					[
 						0,
@@ -290,9 +290,9 @@
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "sdl-wrap::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sdl-wrap-Debug-17052a53d4700323d8f2.json",
-					"name" : "sdl-wrap",
+					"id" : "wrapper-for-sdl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wrapper-for-sdl-Debug-0447cdb3d92e253fce85.json",
+					"name" : "wrapper-for-sdl",
 					"projectIndex" : 0
 				}
 			]
@@ -301,8 +301,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/build",
-		"source" : "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP"
+		"build" : "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/build",
+		"source" : "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl"
 	},
 	"version" : 
 	{

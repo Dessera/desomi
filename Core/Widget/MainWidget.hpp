@@ -40,6 +40,8 @@ class MainWidget {
 
   int loop();
 
+  inline CharacterManager* get_character_manager() { return character_manager.get(); }
+
  private:
   void render();
   [[nodiscard]] bool frame_adjust() const;

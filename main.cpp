@@ -1,5 +1,10 @@
 #include <iostream>
 
+#include "Init/init.hpp"
 #include "Widget/MainWidget.hpp"
 
-int main() { return MainWidget(WidgetConfig{}).loop(); }
+int main() {
+  auto widget = MainWidget(WidgetConfig{});
+  WidgetInit(widget);
+  return widget.loop();
+}

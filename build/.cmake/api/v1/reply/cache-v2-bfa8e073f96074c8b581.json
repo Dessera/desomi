@@ -83,7 +83,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/build"
+			"value" : "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -171,10 +171,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "CXX compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "/usr/bin/clang++"
 		},
 		{
@@ -299,10 +299,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "/usr/bin/clang"
 		},
 		{
@@ -607,7 +607,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP"
+			"value" : "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -851,7 +851,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "sdl-wrap"
+			"value" : "wrapper-for-sdl"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION",
@@ -1690,7 +1690,7 @@
 			"value" : ""
 		},
 		{
-			"name" : "sdl-wrap_BINARY_DIR",
+			"name" : "wrapper-for-sdl_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1699,10 +1699,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/build"
+			"value" : "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/build"
 		},
 		{
-			"name" : "sdl-wrap_IS_TOP_LEVEL",
+			"name" : "wrapper-for-sdl_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1714,7 +1714,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "sdl-wrap_SOURCE_DIR",
+			"name" : "wrapper-for-sdl_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1723,7 +1723,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP"
+			"value" : "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl"
 		}
 	],
 	"kind" : "cache",

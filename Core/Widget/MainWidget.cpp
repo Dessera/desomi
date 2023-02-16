@@ -22,7 +22,6 @@ MainWidget::MainWidget(const WidgetConfig& config) : config(config) {
 
   resources_manager = std::make_unique<ResourcesManager>();
   event_handler = std::make_unique<EventHandler>();
-  // TODO: create character manager
   character_manager = std::make_unique<CharacterManager>();
 }
 
@@ -43,6 +42,9 @@ int MainWidget::loop() {
 void MainWidget::render() {
   SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
   SDL_RenderClear(renderer);
+
+  character_manager->render(renderer);
+
   SDL_RenderPresent(renderer);
 }
 
