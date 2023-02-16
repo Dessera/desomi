@@ -1,0 +1,9 @@
+# ninja log v5
+0	630	1676544786089425194	CMakeFiles/sdl-wrap.dir/main.cpp.o	4534db68ffd43f37
+0	20	1676541918326819323	CMakeFiles/sdl-wrap.dir/Core/Character/test.cpp.o	c49c9fe5e914a454
+20	64	1676541918370820163	sdl-wrap	685b9c6752ed3fae
+1	553	1676544786013423699	CMakeFiles/sdl-wrap.dir/Core/Resource/Resource.cpp.o	ddda0a9b3cf9cc55
+1	679	1676544786137426138	CMakeFiles/sdl-wrap.dir/Core/Widget/MainWidget.cpp.o	91dc69cf9b77bcd
+0	16	1676544820870107951	CMakeFiles/sdl-wrap.dir/Core/Character/CharacterManager.cpp.o	6936bf90d2354919
+1	148	1676544820998110459	CMakeFiles/sdl-wrap.dir/Core/Events/EventHandler.cpp.o	f23a4b00ff6efa75
+148	213	1676544821066111791	sdl-wrap	70b0dc469b604ad2

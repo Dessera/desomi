@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/build",
+  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/./Core -g -std=gnu++20 -o CMakeFiles/sdl-wrap.dir/main.cpp.o -c /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/main.cpp",
+  "file": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/main.cpp"
+},
+{
+  "directory": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/build",
+  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/./Core -g -std=gnu++20 -o CMakeFiles/sdl-wrap.dir/Core/Character/CharacterManager.cpp.o -c /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/Core/Character/CharacterManager.cpp",
+  "file": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/Core/Character/CharacterManager.cpp"
+},
+{
+  "directory": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/build",
+  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/./Core -g -std=gnu++20 -o CMakeFiles/sdl-wrap.dir/Core/Events/EventHandler.cpp.o -c /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/Core/Events/EventHandler.cpp",
+  "file": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/Core/Events/EventHandler.cpp"
+},
+{
+  "directory": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/build",
+  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/./Core -g -std=gnu++20 -o CMakeFiles/sdl-wrap.dir/Core/Resource/Resource.cpp.o -c /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/Core/Resource/Resource.cpp",
+  "file": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/Core/Resource/Resource.cpp"
+},
+{
+  "directory": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/build",
+  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/./Core -g -std=gnu++20 -o CMakeFiles/sdl-wrap.dir/Core/Widget/MainWidget.cpp.o -c /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/Core/Widget/MainWidget.cpp",
+  "file": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/Core/Widget/MainWidget.cpp"
+}
+]
