@@ -6,6 +6,11 @@
 },
 {
   "directory": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/build",
+  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/./Core -g -std=gnu++20 -o CMakeFiles/sdl-wrap.dir/Core/Character/Character.cpp.o -c /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/Core/Character/Character.cpp",
+  "file": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/Core/Character/Character.cpp"
+},
+{
+  "directory": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/build",
   "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/./Core -g -std=gnu++20 -o CMakeFiles/sdl-wrap.dir/Core/Character/CharacterManager.cpp.o -c /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/Core/Character/CharacterManager.cpp",
   "file": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/Core/Character/CharacterManager.cpp"
 },

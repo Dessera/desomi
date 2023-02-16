@@ -1,9 +1,12 @@
 # ninja log v5
-0	630	1676544786089425194	CMakeFiles/sdl-wrap.dir/main.cpp.o	4534db68ffd43f37
+1	667	1676548593249367254	CMakeFiles/sdl-wrap.dir/main.cpp.o	4534db68ffd43f37
 0	20	1676541918326819323	CMakeFiles/sdl-wrap.dir/Core/Character/test.cpp.o	c49c9fe5e914a454
-20	64	1676541918370820163	sdl-wrap	685b9c6752ed3fae
+272	342	1676547983102565431	sdl-wrap	9e1933792e99bdd4
 1	553	1676544786013423699	CMakeFiles/sdl-wrap.dir/Core/Resource/Resource.cpp.o	ddda0a9b3cf9cc55
-1	679	1676544786137426138	CMakeFiles/sdl-wrap.dir/Core/Widget/MainWidget.cpp.o	91dc69cf9b77bcd
-0	16	1676544820870107951	CMakeFiles/sdl-wrap.dir/Core/Character/CharacterManager.cpp.o	6936bf90d2354919
-1	148	1676544820998110459	CMakeFiles/sdl-wrap.dir/Core/Events/EventHandler.cpp.o	f23a4b00ff6efa75
-148	213	1676544821066111791	sdl-wrap	70b0dc469b604ad2
+2	716	1676548593297368087	CMakeFiles/sdl-wrap.dir/Core/Widget/MainWidget.cpp.o	91dc69cf9b77bcd
+1	341	1676548592921361571	CMakeFiles/sdl-wrap.dir/Core/Character/CharacterManager.cpp.o	6936bf90d2354919
+1	322	1676548592905361293	CMakeFiles/sdl-wrap.dir/Core/Events/EventHandler.cpp.o	f23a4b00ff6efa75
+1	272	1676547983034564213	CMakeFiles/sdl-wrap.dir/Core/Character/Character.cpp.o	fbb58937719132c
+2	670	1676548593253367324	CMakeFiles/sdl-wrap.dir/Init/init.cpp.o	9fa61a779242a78
+1	628	1676548644054249075	CMakeFiles/sdl-wrap.dir/main.cpp.o	4534db68ffd43f37
+628	697	1676548644122250257	sdl-wrap	9e1933792e99bdd4

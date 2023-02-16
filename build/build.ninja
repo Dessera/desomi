@@ -224,6 +224,13 @@ build CMakeFiles/sdl-wrap.dir/main.cpp.o: CXX_COMPILER__sdl-wrap_Debug /home/des
   OBJECT_DIR = CMakeFiles/sdl-wrap.dir
   OBJECT_FILE_DIR = CMakeFiles/sdl-wrap.dir
 
+build CMakeFiles/sdl-wrap.dir/Core/Character/Character.cpp.o: CXX_COMPILER__sdl-wrap_Debug /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/Core/Character/Character.cpp || cmake_object_order_depends_target_sdl-wrap
+  DEP_FILE = CMakeFiles/sdl-wrap.dir/Core/Character/Character.cpp.o.d
+  FLAGS = -g -std=gnu++20
+  INCLUDES = -I/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/./Core
+  OBJECT_DIR = CMakeFiles/sdl-wrap.dir
+  OBJECT_FILE_DIR = CMakeFiles/sdl-wrap.dir/Core/Character
+
 build CMakeFiles/sdl-wrap.dir/Core/Character/CharacterManager.cpp.o: CXX_COMPILER__sdl-wrap_Debug /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/SDL_WRAP/Core/Character/CharacterManager.cpp || cmake_object_order_depends_target_sdl-wrap
   DEP_FILE = CMakeFiles/sdl-wrap.dir/Core/Character/CharacterManager.cpp.o.d
   FLAGS = -g -std=gnu++20
@@ -260,7 +267,7 @@ build CMakeFiles/sdl-wrap.dir/Core/Widget/MainWidget.cpp.o: CXX_COMPILER__sdl-wr
 #############################################
 # Link the executable sdl-wrap
 
-build sdl-wrap: CXX_EXECUTABLE_LINKER__sdl-wrap_Debug CMakeFiles/sdl-wrap.dir/main.cpp.o CMakeFiles/sdl-wrap.dir/Core/Character/CharacterManager.cpp.o CMakeFiles/sdl-wrap.dir/Core/Events/EventHandler.cpp.o CMakeFiles/sdl-wrap.dir/Core/Resource/Resource.cpp.o CMakeFiles/sdl-wrap.dir/Core/Widget/MainWidget.cpp.o
+build sdl-wrap: CXX_EXECUTABLE_LINKER__sdl-wrap_Debug CMakeFiles/sdl-wrap.dir/main.cpp.o CMakeFiles/sdl-wrap.dir/Core/Character/Character.cpp.o CMakeFiles/sdl-wrap.dir/Core/Character/CharacterManager.cpp.o CMakeFiles/sdl-wrap.dir/Core/Events/EventHandler.cpp.o CMakeFiles/sdl-wrap.dir/Core/Resource/Resource.cpp.o CMakeFiles/sdl-wrap.dir/Core/Widget/MainWidget.cpp.o
   FLAGS = -g
   LINK_FLAGS = -rdynamic
   LINK_LIBRARIES = -lSDL2  -lSDL2_image
