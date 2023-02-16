@@ -1,8 +1,8 @@
 # ninja log v5
 0	310	1676548837685631912	CMakeFiles/wrapper-for-sdl.dir/Core/Character/Character.cpp.o	abdedc39be991696
 0	344	1676548837721632543	CMakeFiles/wrapper-for-sdl.dir/Core/Events/EventHandler.cpp.o	80cfd6f3f461297c
+0	697	1676548838073638720	CMakeFiles/wrapper-for-sdl.dir/main.cpp.o	20dd6fdc7812cbc3
 0	366	1676548837741632894	CMakeFiles/wrapper-for-sdl.dir/Core/Character/CharacterManager.cpp.o	983861ef107b8f62
 0	582	1676548837957636685	CMakeFiles/wrapper-for-sdl.dir/Core/Resource/Resource.cpp.o	c7dad84cd4e365ba
-0	697	1676548838073638720	CMakeFiles/wrapper-for-sdl.dir/main.cpp.o	20dd6fdc7812cbc3
 0	741	1676548838113639421	CMakeFiles/wrapper-for-sdl.dir/Core/Widget/MainWidget.cpp.o	df20428758b0896a
 741	815	1676548838193640825	wrapper-for-sdl	46bb00dba644237b
