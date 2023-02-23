@@ -11,6 +11,12 @@ int EventHandler::handler(CharacterManager& character_manager) {
       case SDL_MOUSEBUTTONDOWN:
         mouse_down_handler(event, character_manager);
         break;
+      case SDL_MOUSEBUTTONUP:
+        mouse_up_handler(event, character_manager);
+        break;
+      case SDL_MOUSEMOTION:
+        mouse_motion_handler(event, character_manager);
+        break;
       default:
         break;
     }
@@ -21,4 +27,14 @@ int EventHandler::handler(CharacterManager& character_manager) {
 void EventHandler::mouse_down_handler(const SDL_Event& event,
                                       CharacterManager& character_manager) {
   character_manager.on_mouse_down(event);
+}
+
+void EventHandler::mouse_up_handler(const SDL_Event& event,
+                                    CharacterManager& character_manager) {
+  character_manager.on_mouse_up(event);
+}
+
+void EventHandler::mouse_motion_handler(const SDL_Event& event,
+                                        CharacterManager& character_manager) {
+  character_manager.on_mouse_motion(event);
 }

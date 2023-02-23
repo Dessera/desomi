@@ -1,4 +1,4 @@
-# Install script for directory: /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl
+# Install script for directory: /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

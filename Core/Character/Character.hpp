@@ -18,7 +18,12 @@ class Character {
   // TODO: Complete the constructor
   ~Character();
 
+	inline SDL_Rect& get_rect() { return chara_rect; }
+	inline SDL_Color& get_color() { return chara_color; }
+
   void render(SDL_Renderer *renderer);
 
   virtual void on_mouse_down(const SDL_Event &event);
+	virtual void on_mouse_up(const SDL_Event &event);
+	virtual void on_mouse_motion(const SDL_Event &event);
 };

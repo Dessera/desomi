@@ -7,15 +7,18 @@ include(CTest)
 enable_testing()
 
 include_directories(./Core)
+include_directories(./Characters)
 
 aux_source_directory(./Core/Character CHARACTER)
 aux_source_directory(./Core/Events EVENTS)
 aux_source_directory(./Core/Resource RESOURCE)
 aux_source_directory(./Core/Widget WIDGET)
 
+aux_source_directory(./Characters/ CHARS)
+
 link_libraries(SDL2 SDL2_image)
 
-add_executable(wrapper-for-sdl main.cpp ${CHARACTER} ${EVENTS} ${RESOURCE} ${WIDGET})
+add_executable(wrapper-for-sdl main.cpp ${CHARACTER} ${EVENTS} ${RESOURCE} ${WIDGET} ${CHARS})
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

@@ -26,4 +26,6 @@ class CharacterManager {
 
 	// TODO: add hooks for events
   void on_mouse_down(const SDL_Event& event);
+	void on_mouse_up(const SDL_Event& event);
+	void on_mouse_motion(const SDL_Event& event);
 };

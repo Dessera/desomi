@@ -19,4 +19,8 @@ class EventHandler {
   // TODO: Add Event Hooks like the function below
   void mouse_down_handler(const SDL_Event& event,
                           CharacterManager& character_manager);
+	void mouse_up_handler(const SDL_Event& event,
+													CharacterManager& character_manager);
+	void mouse_motion_handler(const SDL_Event& event,
+														CharacterManager& character_manager);
 };

@@ -1,32 +1,37 @@
 [
 {
-  "directory": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/build",
-  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/./Core -g -std=gnu++20 -o CMakeFiles/wrapper-for-sdl.dir/main.cpp.o -c /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/main.cpp",
-  "file": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/main.cpp"
+  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/build",
+  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters -g -std=gnu++20 -o CMakeFiles/wrapper-for-sdl.dir/main.cpp.o -c /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/main.cpp",
+  "file": "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/main.cpp"
 },
 {
-  "directory": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/build",
-  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/./Core -g -std=gnu++20 -o CMakeFiles/wrapper-for-sdl.dir/Core/Character/Character.cpp.o -c /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/Core/Character/Character.cpp",
-  "file": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/Core/Character/Character.cpp"
+  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/build",
+  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters -g -std=gnu++20 -o CMakeFiles/wrapper-for-sdl.dir/Core/Character/Character.cpp.o -c /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Character/Character.cpp",
+  "file": "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Character/Character.cpp"
 },
 {
-  "directory": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/build",
-  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/./Core -g -std=gnu++20 -o CMakeFiles/wrapper-for-sdl.dir/Core/Character/CharacterManager.cpp.o -c /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/Core/Character/CharacterManager.cpp",
-  "file": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/Core/Character/CharacterManager.cpp"
+  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/build",
+  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters -g -std=gnu++20 -o CMakeFiles/wrapper-for-sdl.dir/Core/Character/CharacterManager.cpp.o -c /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Character/CharacterManager.cpp",
+  "file": "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Character/CharacterManager.cpp"
 },
 {
-  "directory": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/build",
-  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/./Core -g -std=gnu++20 -o CMakeFiles/wrapper-for-sdl.dir/Core/Events/EventHandler.cpp.o -c /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/Core/Events/EventHandler.cpp",
-  "file": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/Core/Events/EventHandler.cpp"
+  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/build",
+  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters -g -std=gnu++20 -o CMakeFiles/wrapper-for-sdl.dir/Core/Events/EventHandler.cpp.o -c /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Events/EventHandler.cpp",
+  "file": "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Events/EventHandler.cpp"
 },
 {
-  "directory": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/build",
-  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/./Core -g -std=gnu++20 -o CMakeFiles/wrapper-for-sdl.dir/Core/Resource/Resource.cpp.o -c /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/Core/Resource/Resource.cpp",
-  "file": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/Core/Resource/Resource.cpp"
+  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/build",
+  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters -g -std=gnu++20 -o CMakeFiles/wrapper-for-sdl.dir/Core/Resource/Resource.cpp.o -c /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Resource/Resource.cpp",
+  "file": "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Resource/Resource.cpp"
 },
 {
-  "directory": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/build",
-  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/./Core -g -std=gnu++20 -o CMakeFiles/wrapper-for-sdl.dir/Core/Widget/MainWidget.cpp.o -c /home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/Core/Widget/MainWidget.cpp",
-  "file": "/home/dessera/Desktop/CppSources/CMAKE-DEVELOP/SDL/wapper-for-sdl/Core/Widget/MainWidget.cpp"
+  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/build",
+  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters -g -std=gnu++20 -o CMakeFiles/wrapper-for-sdl.dir/Core/Widget/MainWidget.cpp.o -c /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Widget/MainWidget.cpp",
+  "file": "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Widget/MainWidget.cpp"
+},
+{
+  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/build",
+  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters -g -std=gnu++20 -o CMakeFiles/wrapper-for-sdl.dir/Characters/Draggable.cpp.o -c /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Characters/Draggable.cpp",
+  "file": "/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Characters/Draggable.cpp"
 }
 ]

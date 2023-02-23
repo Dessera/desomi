@@ -30,3 +30,15 @@ void CharacterManager::on_mouse_down(const SDL_Event &event) {
     character->on_mouse_down(event);
   }
 }
+
+void CharacterManager::on_mouse_up(const SDL_Event &event) {
+	for (auto *character : characters) {
+		character->on_mouse_up(event);
+	}
+}
+
+void CharacterManager::on_mouse_motion(const SDL_Event &event) {
+	for (auto *character : characters) {
+		character->on_mouse_motion(event);
+	}
+}
