@@ -1,4 +1,5 @@
 #include "MainWidget.hpp"
+
 #include <SDL2/SDL_mouse.h>
 
 #include <exception>
@@ -62,7 +63,20 @@ bool MainWidget::frame_adjust() const {
 }
 
 void MainWidget::set_cursor(const std::string& path) {
-	SDL_Surface* surface = resources_manager->get_surface(path);
-	SDL_Cursor* cursor = SDL_CreateColorCursor(surface, 0, 0);
-	SDL_SetCursor(cursor);
+  SDL_Surface* surface = resources_manager->get_surface(path);
+  SDL_Cursor* cursor = SDL_CreateColorCursor(surface, 0, 0);
+  SDL_SetCursor(cursor);
+}
+
+void MainWidget::add_character(Character* character,
+                               const std::string& path) {
+  character_manager->add_character(character);
+  if (path.empty()) {
+    return;
+  }
+  auto* texture = resources_manager->get_texture(path);
+  if (texture == nullptr) {
+    return;
+  }
+  character->set_texture(texture);
 }

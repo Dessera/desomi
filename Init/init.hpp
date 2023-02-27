@@ -1,6 +1,6 @@
-#include <memory>
-#include "Draggable.hpp"
+#pragma once
 #include "Widget/MainWidget.hpp"
+#include <memory>
 
 class WidgetInit {
  private:

@@ -38,11 +38,13 @@ class MainWidget {
   explicit MainWidget(const WidgetConfig& config);
   ~MainWidget();
 
+  #pragma region Deleted functions
   MainWidget() = delete;
   MainWidget(const MainWidget&) = delete;
   MainWidget& operator=(const MainWidget&) = delete;
   MainWidget(MainWidget&&) = delete;
   MainWidget& operator=(MainWidget&&) = delete;
+  #pragma endregion
 
   // Main loop here
   int loop();
@@ -52,6 +54,7 @@ class MainWidget {
   inline EventHandler* get_event_handler() { return event_handler.get(); }
 
 	void set_cursor(const std::string& path);
+  void add_character(Character* character, const std::string& path = "");
 
  private:
   void render();
