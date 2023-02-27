@@ -1,4 +1,5 @@
 #include "MainWidget.hpp"
+#include <SDL2/SDL_mouse.h>
 
 #include <exception>
 #include <iostream>
@@ -28,6 +29,7 @@ MainWidget::MainWidget(const WidgetConfig& config) : config(config) {
 MainWidget::~MainWidget() {
   SDL_DestroyRenderer(renderer);
   SDL_DestroyWindow(window);
+  SDL_FreeCursor(cursor);
   SDL_Quit();
 }
 
@@ -57,4 +59,10 @@ bool MainWidget::frame_adjust() const {
   }
   prev = SDL_GetTicks();
   return true;
+}
+
+void MainWidget::set_cursor(const std::string& path) {
+	SDL_Surface* surface = resources_manager->get_surface(path);
+	SDL_Cursor* cursor = SDL_CreateColorCursor(surface, 0, 0);
+	SDL_SetCursor(cursor);
 }

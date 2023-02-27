@@ -1,6 +1,7 @@
 #pragma once
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_render.h>
+#include <SDL2/SDL_surface.h>
 
 #include <string>
 #include <unordered_map>
@@ -12,6 +13,7 @@
 class ResourcesManager {
  private:
   std::unordered_map<std::string, SDL_Texture*> textures{};
+  std::unordered_map<std::string, SDL_Surface*> surfaces{};
 
  public:
   ResourcesManager() = default;
@@ -23,7 +25,11 @@ class ResourcesManager {
   ResourcesManager& operator=(ResourcesManager&&) = delete;
 
   SDL_Texture* get_texture(const std::string& path);
-  SDL_Texture* operator[](const std::string& path);
+  SDL_Surface* get_surface(const std::string& path);
+
   bool load_texture(const std::string& path, SDL_Renderer* renderer);
+	bool load_surface(const std::string& path);
+  
   bool unload_texture(const std::string& path);
+  bool unload_surface(const std::string& path);
 };

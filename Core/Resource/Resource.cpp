@@ -5,6 +5,9 @@ ResourcesManager::~ResourcesManager() {
   for (auto& [path, texture] : textures) {
     SDL_DestroyTexture(texture);
   }
+  for (auto& [path, surface] : surfaces) {
+    SDL_FreeSurface(surface);
+  }
 }
 
 SDL_Texture* ResourcesManager::get_texture(const std::string& path) {
@@ -14,8 +17,11 @@ SDL_Texture* ResourcesManager::get_texture(const std::string& path) {
 	return textures[path];
 }
 
-SDL_Texture* ResourcesManager::operator[](const std::string& path) {
-	return get_texture(path);
+SDL_Surface* ResourcesManager::get_surface(const std::string& path) {
+  if (surfaces.find(path) == surfaces.end()) {
+    return nullptr;
+  }
+  return surfaces[path];
 }
 
 bool ResourcesManager::load_texture(const std::string& path, SDL_Renderer* renderer) {
@@ -33,6 +39,27 @@ bool ResourcesManager::load_texture(const std::string& path, SDL_Renderer* rende
 	}
 	textures[path] = texture;
 	return true;
+}
+
+bool ResourcesManager::load_surface(const std::string& path) {
+  if (surfaces.find(path) != surfaces.end()) {
+    return false;
+  }
+  SDL_Surface* surface = IMG_Load(path.c_str());
+  if (surface == nullptr) {
+    return false;
+  }
+  surfaces[path] = surface;
+  return true;
+}
+
+bool ResourcesManager::unload_surface(const std::string& path) {
+  if (surfaces.find(path) == surfaces.end()) {
+    return false;
+  }
+  SDL_FreeSurface(surfaces[path]);
+  surfaces.erase(path);
+  return true;
 }
 
 bool ResourcesManager::unload_texture(const std::string& path) {

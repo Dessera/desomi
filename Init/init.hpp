@@ -1,6 +1,14 @@
+#include <memory>
 #include "Draggable.hpp"
 #include "Widget/MainWidget.hpp"
-void WidgetInit(MainWidget& widget) {
-  auto* character = new Draggable();
-  widget.get_character_manager()->add_character(character);
-}
+
+class WidgetInit {
+ private:
+ std::unique_ptr<MainWidget> main_widget;
+
+ public:
+  WidgetInit();
+  ~WidgetInit() = default;
+
+  int init();
+};

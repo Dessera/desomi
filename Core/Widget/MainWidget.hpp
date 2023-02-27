@@ -2,6 +2,7 @@
 #include <SDL2/SDL.h>
 
 #include <memory>
+#include <string>
 
 #include "Character/CharacterManager.hpp"
 #include "Events/EventHandler.hpp"
@@ -19,15 +20,20 @@ using WidgetConfig = struct wconfig {
 
 class MainWidget {
  private:
+  // SDL Core variables
   SDL_Window* window{nullptr};
   SDL_Renderer* renderer{nullptr};
 
+  // Config (edit this variable can not change the widget)
+  WidgetConfig config{};
+
+  // Managers
   std::unique_ptr<ResourcesManager> resources_manager{nullptr};
   std::unique_ptr<EventHandler> event_handler{nullptr};
   std::unique_ptr<CharacterManager> character_manager{nullptr};
 
-  WidgetConfig config{};
-
+  // Other element of the widget
+  SDL_Cursor* cursor{nullptr};
  public:
   explicit MainWidget(const WidgetConfig& config);
   ~MainWidget();
@@ -38,9 +44,14 @@ class MainWidget {
   MainWidget(MainWidget&&) = delete;
   MainWidget& operator=(MainWidget&&) = delete;
 
+  // Main loop here
   int loop();
 
   inline CharacterManager* get_character_manager() { return character_manager.get(); }
+  inline ResourcesManager* get_resources_manager() { return resources_manager.get(); }
+  inline EventHandler* get_event_handler() { return event_handler.get(); }
+
+	void set_cursor(const std::string& path);
 
  private:
   void render();
