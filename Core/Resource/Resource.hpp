@@ -27,6 +27,7 @@ class ResourcesManager {
   SDL_Texture* get_texture(const std::string& path);
   SDL_Surface* get_surface(const std::string& path);
 
+  // TODO: Add more methods for loading and unloading resources
   bool load_texture(const std::string& path, SDL_Renderer* renderer);
 	bool load_surface(const std::string& path);
   

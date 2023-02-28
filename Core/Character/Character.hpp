@@ -5,28 +5,82 @@
 #include <SDL2/SDL_rect.h>
 #include <SDL2/SDL_render.h>
 
+#include <cstdint>
 #include <string>
+
+#define SDL_DEFAULT_SIZE 0, 0, 100, 100
+#define SDL_DEFAULT_COLOR 255, 0, 0, 255
+
+/**
+ * @brief 角色基类，需要定义其他角色时，继承此类即可
+ *        此处的角色指的是窗口中的任何一个元素。
+ *        使用时，定义了路径的话，会自动加载材质，否则不会自动加载材质
+ */
 
 class Character {
  private:
-  SDL_Rect chara_rect{0, 0, 100, 100};
-  SDL_Color chara_color{255, 0, 0, 255};
+  /**
+   * @brief 角色的矩形区域和基本参数
+   *        当路径为空时，使用颜色进行渲染
+   *        当路径不为空时，使用材质进行渲染
+   */
+
+  SDL_Rect chara_rect{SDL_DEFAULT_SIZE};
+  SDL_Color chara_color{SDL_DEFAULT_COLOR};
   SDL_Texture *chara_texture{nullptr};
+  double angle{0};
   std::string path{};
 
+  /**
+   * @brief 角色的速度
+   *        速度为每帧移动的像素数
+   *        旋转速度为每帧旋转的角度
+   */
+
+  int32_t speed_x{0};
+  int32_t speed_y{0};
+  double rotate_speed{0};
+
  public:
+  /**
+   * @brief 构造函数
+   *        因为角色类仅仅使用材质，不涉及材质的销毁，因此不需要在拷贝时进行深拷贝
+   */
+
   Character() = default;
-  // TODO: Complete the constructor
+  Character(const Character &other) = default;
+  Character(Character &&other) = default;
+  Character &operator=(const Character &other) = default;
+  Character &operator=(Character &&other) = default;
+
+  explicit Character(const SDL_Rect &rect,
+                     const SDL_Color &color = SDL_Color{SDL_DEFAULT_COLOR},
+                     std::string path = "");
   virtual ~Character();
+
+  /**
+   * @brief 获得角色的内部信息，允许更改
+   */
 
   inline SDL_Rect &get_rect() { return chara_rect; }
   inline SDL_Color &get_color() { return chara_color; }
+  inline double &get_angle() { return angle; }
   inline SDL_Texture *get_texture() { return chara_texture; }
   inline std::string &get_path() { return path; }
-
+  inline int32_t &get_speed_x() { return speed_x; }
+  inline int32_t &get_speed_y() { return speed_y; }
+  inline double &get_rotate_speed() { return rotate_speed; }
   inline void set_texture(SDL_Texture *texture) { chara_texture = texture; }
 
   void render(SDL_Renderer *renderer);
+
+  /**
+   * @brief 事件钩子，按需重写
+   * 
+   * @param event 事件的所有信息
+   * @return true 事件向下传递
+   * @return false 事件停止向下传递
+   */
 
   virtual bool on_quit(const SDL_Event &event);
   virtual bool on_locale_changed(const SDL_Event &event);

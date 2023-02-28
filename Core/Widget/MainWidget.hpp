@@ -54,7 +54,8 @@ class MainWidget {
   inline EventHandler* get_event_handler() { return event_handler.get(); }
 
 	void set_cursor(const std::string& path);
-  void add_character(Character* character, const std::string& path = "");
+  void add_character(Character* character);
+  void load_texture(const std::string& path);
 
  private:
   void render();

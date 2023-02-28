@@ -1,16 +1,26 @@
 #include "Character.hpp"
 
 #include <SDL2/SDL_rect.h>
+#include <SDL2/SDL_render.h>
+
+#include <utility>
 
 Character::~Character() { SDL_DestroyTexture(chara_texture); }
+Character::Character(const SDL_Rect &rect, const SDL_Color &color,
+                     std::string path)
+    : chara_rect(rect), chara_color(color), path(std::move(path)) {}
 
 void Character::render(SDL_Renderer *renderer) {
+  chara_rect.x += speed_x;
+  chara_rect.y += speed_y;
+  angle += rotate_speed;
   if (chara_texture == nullptr) {
     SDL_SetRenderDrawColor(renderer, chara_color.r, chara_color.g,
                            chara_color.b, chara_color.a);
     SDL_RenderFillRect(renderer, &chara_rect);
   } else {
-    SDL_RenderCopy(renderer, chara_texture, nullptr, &chara_rect);
+    SDL_RenderCopyEx(renderer, chara_texture, nullptr, &chara_rect, angle,
+                     nullptr, SDL_FLIP_NONE);
   }
 }
 

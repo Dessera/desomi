@@ -1,5 +1,6 @@
 #include "MainWidget.hpp"
 
+#include <SDL2/SDL.h>
 #include <SDL2/SDL_mouse.h>
 
 #include <exception>
@@ -28,14 +29,13 @@ MainWidget::MainWidget(const WidgetConfig& config) : config(config) {
 }
 
 MainWidget::~MainWidget() {
+  SDL_Quit();
   SDL_DestroyRenderer(renderer);
   SDL_DestroyWindow(window);
   SDL_FreeCursor(cursor);
-  SDL_Quit();
 }
 
 int MainWidget::loop() {
-  SDL_Event event;
   do {
     render();
   } while (frame_adjust() && event_handler->handler(*character_manager) == 0);
@@ -68,9 +68,9 @@ void MainWidget::set_cursor(const std::string& path) {
   SDL_SetCursor(cursor);
 }
 
-void MainWidget::add_character(Character* character,
-                               const std::string& path) {
+void MainWidget::add_character(Character* character) {
   character_manager->add_character(character);
+  auto path = character->get_path();
   if (path.empty()) {
     return;
   }
@@ -79,4 +79,8 @@ void MainWidget::add_character(Character* character,
     return;
   }
   character->set_texture(texture);
+}
+
+void MainWidget::load_texture(const std::string& path) {
+  resources_manager->load_texture(path, renderer);
 }
