@@ -11,21 +11,23 @@ bool Draggable::on_mouse_down(const SDL_Event &event) {
     mouse_offset.x = event.button.x - this->get_rect().x;
     mouse_offset.y = event.button.y - this->get_rect().y;
     is_dragging = true;
+    return false;
   }
-  return false;
+  return true;
 }
 
 bool Draggable::on_mouse_up(const SDL_Event &event) {
   if (event.button.button == SDL_BUTTON_LEFT) {
     is_dragging = false;
   }
-  return false;
+  return true;
 }
 
 bool Draggable::on_mouse_motion(const SDL_Event &event) {
   if (is_dragging) {
     this->get_rect().x = event.motion.x - mouse_offset.x;
     this->get_rect().y = event.motion.y - mouse_offset.y;
+    return false;
   }
-  return false;
+  return true;
 }
