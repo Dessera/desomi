@@ -220,65 +220,37 @@ build cmake_object_order_depends_target_wrapper-for-sdl: phony || CMakeFiles/wra
 build CMakeFiles/wrapper-for-sdl.dir/main.cpp.o: CXX_COMPILER__wrapper-for-sdl_Debug /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/main.cpp || cmake_object_order_depends_target_wrapper-for-sdl
   DEP_FILE = CMakeFiles/wrapper-for-sdl.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++20
-  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters
+  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core
   OBJECT_DIR = CMakeFiles/wrapper-for-sdl.dir
   OBJECT_FILE_DIR = CMakeFiles/wrapper-for-sdl.dir
 
-build CMakeFiles/wrapper-for-sdl.dir/Core/Character/Character.cpp.o: CXX_COMPILER__wrapper-for-sdl_Debug /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Character/Character.cpp || cmake_object_order_depends_target_wrapper-for-sdl
-  DEP_FILE = CMakeFiles/wrapper-for-sdl.dir/Core/Character/Character.cpp.o.d
+build CMakeFiles/wrapper-for-sdl.dir/Core/deps/event_handler.cpp.o: CXX_COMPILER__wrapper-for-sdl_Debug /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/deps/event_handler.cpp || cmake_object_order_depends_target_wrapper-for-sdl
+  DEP_FILE = CMakeFiles/wrapper-for-sdl.dir/Core/deps/event_handler.cpp.o.d
   FLAGS = -g -std=gnu++20
-  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters
+  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core
   OBJECT_DIR = CMakeFiles/wrapper-for-sdl.dir
-  OBJECT_FILE_DIR = CMakeFiles/wrapper-for-sdl.dir/Core/Character
+  OBJECT_FILE_DIR = CMakeFiles/wrapper-for-sdl.dir/Core/deps
 
-build CMakeFiles/wrapper-for-sdl.dir/Core/Character/CharacterManager.cpp.o: CXX_COMPILER__wrapper-for-sdl_Debug /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Character/CharacterManager.cpp || cmake_object_order_depends_target_wrapper-for-sdl
-  DEP_FILE = CMakeFiles/wrapper-for-sdl.dir/Core/Character/CharacterManager.cpp.o.d
+build CMakeFiles/wrapper-for-sdl.dir/Core/deps/object_element.cpp.o: CXX_COMPILER__wrapper-for-sdl_Debug /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/deps/object_element.cpp || cmake_object_order_depends_target_wrapper-for-sdl
+  DEP_FILE = CMakeFiles/wrapper-for-sdl.dir/Core/deps/object_element.cpp.o.d
   FLAGS = -g -std=gnu++20
-  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters
+  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core
   OBJECT_DIR = CMakeFiles/wrapper-for-sdl.dir
-  OBJECT_FILE_DIR = CMakeFiles/wrapper-for-sdl.dir/Core/Character
+  OBJECT_FILE_DIR = CMakeFiles/wrapper-for-sdl.dir/Core/deps
 
-build CMakeFiles/wrapper-for-sdl.dir/Core/Events/EventHandler.cpp.o: CXX_COMPILER__wrapper-for-sdl_Debug /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Events/EventHandler.cpp || cmake_object_order_depends_target_wrapper-for-sdl
-  DEP_FILE = CMakeFiles/wrapper-for-sdl.dir/Core/Events/EventHandler.cpp.o.d
+build CMakeFiles/wrapper-for-sdl.dir/Core/deps/resource_manager.cpp.o: CXX_COMPILER__wrapper-for-sdl_Debug /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/deps/resource_manager.cpp || cmake_object_order_depends_target_wrapper-for-sdl
+  DEP_FILE = CMakeFiles/wrapper-for-sdl.dir/Core/deps/resource_manager.cpp.o.d
   FLAGS = -g -std=gnu++20
-  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters
+  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core
   OBJECT_DIR = CMakeFiles/wrapper-for-sdl.dir
-  OBJECT_FILE_DIR = CMakeFiles/wrapper-for-sdl.dir/Core/Events
+  OBJECT_FILE_DIR = CMakeFiles/wrapper-for-sdl.dir/Core/deps
 
-build CMakeFiles/wrapper-for-sdl.dir/Core/Resource/Resource.cpp.o: CXX_COMPILER__wrapper-for-sdl_Debug /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Resource/Resource.cpp || cmake_object_order_depends_target_wrapper-for-sdl
-  DEP_FILE = CMakeFiles/wrapper-for-sdl.dir/Core/Resource/Resource.cpp.o.d
+build CMakeFiles/wrapper-for-sdl.dir/Core/deps/window.cpp.o: CXX_COMPILER__wrapper-for-sdl_Debug /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/deps/window.cpp || cmake_object_order_depends_target_wrapper-for-sdl
+  DEP_FILE = CMakeFiles/wrapper-for-sdl.dir/Core/deps/window.cpp.o.d
   FLAGS = -g -std=gnu++20
-  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters
+  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core
   OBJECT_DIR = CMakeFiles/wrapper-for-sdl.dir
-  OBJECT_FILE_DIR = CMakeFiles/wrapper-for-sdl.dir/Core/Resource
-
-build CMakeFiles/wrapper-for-sdl.dir/Core/Widget/MainWidget.cpp.o: CXX_COMPILER__wrapper-for-sdl_Debug /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Core/Widget/MainWidget.cpp || cmake_object_order_depends_target_wrapper-for-sdl
-  DEP_FILE = CMakeFiles/wrapper-for-sdl.dir/Core/Widget/MainWidget.cpp.o.d
-  FLAGS = -g -std=gnu++20
-  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters
-  OBJECT_DIR = CMakeFiles/wrapper-for-sdl.dir
-  OBJECT_FILE_DIR = CMakeFiles/wrapper-for-sdl.dir/Core/Widget
-
-build CMakeFiles/wrapper-for-sdl.dir/Characters/Draggable.cpp.o: CXX_COMPILER__wrapper-for-sdl_Debug /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Characters/Draggable.cpp || cmake_object_order_depends_target_wrapper-for-sdl
-  DEP_FILE = CMakeFiles/wrapper-for-sdl.dir/Characters/Draggable.cpp.o.d
-  FLAGS = -g -std=gnu++20
-  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters
-  OBJECT_DIR = CMakeFiles/wrapper-for-sdl.dir
-  OBJECT_FILE_DIR = CMakeFiles/wrapper-for-sdl.dir/Characters
-
-build CMakeFiles/wrapper-for-sdl.dir/Init/Init.cpp.o: CXX_COMPILER__wrapper-for-sdl_Debug /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Init/Init.cpp || cmake_object_order_depends_target_wrapper-for-sdl
-  DEP_FILE = CMakeFiles/wrapper-for-sdl.dir/Init/Init.cpp.o.d
-  FLAGS = -g -std=gnu++20
-  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters
-  OBJECT_DIR = CMakeFiles/wrapper-for-sdl.dir
-  OBJECT_FILE_DIR = CMakeFiles/wrapper-for-sdl.dir/Init
-
-build CMakeFiles/wrapper-for-sdl.dir/Init/InitComstruct.cpp.o: CXX_COMPILER__wrapper-for-sdl_Debug /home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/Init/InitComstruct.cpp || cmake_object_order_depends_target_wrapper-for-sdl
-  DEP_FILE = CMakeFiles/wrapper-for-sdl.dir/Init/InitComstruct.cpp.o.d
-  FLAGS = -g -std=gnu++20
-  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Core -I/home/dessera/Desktop/CppWorkspace/SDL/wapper-for-sdl/./Characters
-  OBJECT_DIR = CMakeFiles/wrapper-for-sdl.dir
-  OBJECT_FILE_DIR = CMakeFiles/wrapper-for-sdl.dir/Init
+  OBJECT_FILE_DIR = CMakeFiles/wrapper-for-sdl.dir/Core/deps
 
 
 # =============================================================================
@@ -288,7 +260,7 @@ build CMakeFiles/wrapper-for-sdl.dir/Init/InitComstruct.cpp.o: CXX_COMPILER__wra
 #############################################
 # Link the executable wrapper-for-sdl
 
-build wrapper-for-sdl: CXX_EXECUTABLE_LINKER__wrapper-for-sdl_Debug CMakeFiles/wrapper-for-sdl.dir/main.cpp.o CMakeFiles/wrapper-for-sdl.dir/Core/Character/Character.cpp.o CMakeFiles/wrapper-for-sdl.dir/Core/Character/CharacterManager.cpp.o CMakeFiles/wrapper-for-sdl.dir/Core/Events/EventHandler.cpp.o CMakeFiles/wrapper-for-sdl.dir/Core/Resource/Resource.cpp.o CMakeFiles/wrapper-for-sdl.dir/Core/Widget/MainWidget.cpp.o CMakeFiles/wrapper-for-sdl.dir/Characters/Draggable.cpp.o CMakeFiles/wrapper-for-sdl.dir/Init/Init.cpp.o CMakeFiles/wrapper-for-sdl.dir/Init/InitComstruct.cpp.o
+build wrapper-for-sdl: CXX_EXECUTABLE_LINKER__wrapper-for-sdl_Debug CMakeFiles/wrapper-for-sdl.dir/main.cpp.o CMakeFiles/wrapper-for-sdl.dir/Core/deps/event_handler.cpp.o CMakeFiles/wrapper-for-sdl.dir/Core/deps/object_element.cpp.o CMakeFiles/wrapper-for-sdl.dir/Core/deps/resource_manager.cpp.o CMakeFiles/wrapper-for-sdl.dir/Core/deps/window.cpp.o
   FLAGS = -g
   LINK_FLAGS = -rdynamic
   LINK_LIBRARIES = -lSDL2  -lSDL2_image

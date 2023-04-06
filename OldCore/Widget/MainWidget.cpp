@@ -64,7 +64,7 @@ bool MainWidget::frame_adjust() const {
 
 void MainWidget::set_cursor(const std::string& path) {
   SDL_Surface* surface = resources_manager->get_surface(path);
-  SDL_Cursor* cursor = SDL_CreateColorCursor(surface, 0, 0);
+  cursor = SDL_CreateColorCursor(surface, 0, 0);
   SDL_SetCursor(cursor);
 }
 
