@@ -1,21 +1,7 @@
 # ninja log v5
-1	947	1677509647270771819	CMakeFiles/wrapper-for-sdl.dir/Core/Resource/Resource.cpp.o	760187adcc86d525
-1	1075	1677576106606089606	CMakeFiles/wrapper-for-sdl.dir/Core/Widget/MainWidget.cpp.o	fc7176bd0886f955
-603	713	1680784479535711841	wrapper-for-sdl	3083470dc9e5fa6b
-2	1165	1677575936992481613	CMakeFiles/wrapper-for-sdl.dir/Init/InitComstruct.cpp.o	9d2604b303dd6168
-2	837	1680781425736782433	CMakeFiles/wrapper-for-sdl.dir/_Core/deps/resource_manager.cpp.o	84aaa35b788f3bee
-1	536	1680783599116037005	CMakeFiles/wrapper-for-sdl.dir/_Core/deps/object_element.cpp.o	24b79a88498c151d
-1	719	1677575936548477955	CMakeFiles/wrapper-for-sdl.dir/Core/Character/CharacterManager.cpp.o	b97d8e7ddfc120e
-1	874	1677576326860666310	CMakeFiles/wrapper-for-sdl.dir/Init/Init.cpp.o	73a54670240a9f70
-1	562	1677575936392476669	CMakeFiles/wrapper-for-sdl.dir/Core/Character/Character.cpp.o	cafbd41545d455a0
-1	367	1677576924885188271	CMakeFiles/wrapper-for-sdl.dir/Characters/Draggable.cpp.o	d10576192098afd0
-1	716	1680783415640729084	CMakeFiles/wrapper-for-sdl.dir/_Core/deps/event_handler.cpp.o	d5edbf47c655ce6f
-1	603	1680784479423707373	CMakeFiles/wrapper-for-sdl.dir/main.cpp.o	b832734d957c4cb8
-1	945	1680784085420804133	CMakeFiles/wrapper-for-sdl.dir/_Core/deps/window.cpp.o	10226e9bd5c47e3e
-2	774	1677575936604478416	CMakeFiles/wrapper-for-sdl.dir/Core/Events/EventHandler.cpp.o	6574f02f0469d2ef
-1	555	1680786564202902878	CMakeFiles/wrapper-for-sdl.dir/Core/deps/object_element.cpp.o	2ffb43aadb9dbb04
-0	652	1680786564298904000	CMakeFiles/wrapper-for-sdl.dir/main.cpp.o	1b92f1f56734b78b
-0	718	1680786564362904747	CMakeFiles/wrapper-for-sdl.dir/Core/deps/event_handler.cpp.o	915730a6aa465c90
-1	851	1680786564494906289	CMakeFiles/wrapper-for-sdl.dir/Core/deps/resource_manager.cpp.o	98462b92930e2002
-1	947	1680786564590907410	CMakeFiles/wrapper-for-sdl.dir/Core/deps/window.cpp.o	ad315dbd77fe3431
-947	1055	1680786564702908719	wrapper-for-sdl	5dac4b9e115a1cb6
+1	146	1680882347142807213	CMakeFiles/desomi_playground.dir/desomi/core/src/utils.cpp.o	536038f28f5181df
+1	502	1680882347494813715	CMakeFiles/desomi_playground.dir/desomi/core/src/renderer.cpp.o	982210e2c027780e
+0	552	1680882347546814676	CMakeFiles/desomi_playground.dir/main.cpp.o	488392cd0372968b
+1	563	1680882347554814824	CMakeFiles/desomi_playground.dir/desomi/core/src/window.cpp.o	d556454a767117b8
+1	618	1680882347610815858	CMakeFiles/desomi_playground.dir/desomi/core/src/node.cpp.o	1d74c3f0553ed23c
+618	693	1680882347690817336	desomi_playground	53ed548fdefe2a54
