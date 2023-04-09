@@ -1,3 +1,4 @@
+#pragma once
 
 #include <SDL2/SDL_rect.h>
 
@@ -10,7 +11,7 @@ class rect {
   rect(int32_t x, int32_t y, int32_t width, int32_t height, int32_t speed_x,
        int32_t speed_y,double angle , double rotation_speed);
 
-  inline SDL_Rect sdl_rect() { return SDL_Rect{x_, y_, width_, height_}; }
+  [[nodiscard]] inline SDL_Rect sdl_rect() const { return SDL_Rect{x_, y_, width_, height_}; }
 
   [[nodiscard]] inline int32_t x() const { return x_; }
   [[nodiscard]] inline int32_t y() const { return y_; }

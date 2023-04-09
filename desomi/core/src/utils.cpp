@@ -16,6 +16,8 @@ color::color(uint32_t color)
       blue_((color & static_cast<uint32_t>(color_mask::blue)) >>
             static_cast<uint8_t>(color_shift::blue)),
       alpha_(color & static_cast<uint32_t>(color_mask::alpha)) {}
+color::color(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha)
+    : red_(red), green_(green), blue_(blue), alpha_(alpha) {}
 
 rect::rect(int32_t x, int32_t y, int32_t width, int32_t height, int32_t speed_x,
            int32_t speed_y, double angle, double rotation_speed)

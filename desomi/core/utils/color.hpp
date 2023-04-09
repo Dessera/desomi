@@ -1,3 +1,4 @@
+#pragma once
 
 #include <SDL2/SDL_pixels.h>
 
@@ -20,6 +21,9 @@ class color {
 
   color() = default;
   explicit color(uint32_t color);
+  explicit color(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha = 0xFF);
+
+  [[nodiscard]]
 
   inline SDL_Color sdl_color() {
     return SDL_Color{red_, green_, blue_, alpha_};
