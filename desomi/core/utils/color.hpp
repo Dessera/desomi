@@ -5,7 +5,7 @@
 #include <cstdint>
 namespace desomi::core::utils {
 
-class color {
+class Color {
  public:
   enum class color_mask : uint32_t {
     red = 0xFF000000,
@@ -19,9 +19,9 @@ class color {
     blue = 8,
   };
 
-  color() = default;
-  explicit color(uint32_t color);
-  explicit color(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha = 0xFF);
+  Color() = default;
+  explicit Color(uint32_t color);
+  explicit Color(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha = 0xFF);
 
   [[nodiscard]]
 

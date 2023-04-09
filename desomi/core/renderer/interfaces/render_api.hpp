@@ -10,8 +10,8 @@ namespace desomi::core::interfaces {
 
 class IrendererAPI {
  private:
-  using rect = core::utils::rect;
-  using color = core::utils::color;
+  using rect = core::utils::Rect;
+  using Color = core::utils::Color;
 
  public:
   virtual ~IrendererAPI() = default;
@@ -29,8 +29,9 @@ class IrendererAPI {
   // TODO: implement render viewport behavior
   // TODO: implement render clip behavior
 
-  virtual void set_draw_color(const color& color_) = 0;
-  virtual color get_draw_color() = 0;
+  virtual void set_draw_color(const Color& color_) = 0;
+  virtual void default_draw_color() = 0;
+  virtual Color get_draw_color() = 0;
 
   // TODO: implement render draw blend mode behavior
 

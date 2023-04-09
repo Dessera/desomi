@@ -26,6 +26,11 @@
 },
 {
   "directory": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/build",
+  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -std=gnu++20 -o CMakeFiles/desomi_playground.dir/desomi/core/node/src/rect_node.cc.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/node/src/rect_node.cc",
+  "file": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/node/src/rect_node.cc"
+},
+{
+  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/build",
   "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -std=gnu++20 -o CMakeFiles/desomi_playground.dir/desomi/core/node/src/root.cc.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/node/src/root.cc",
   "file": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/node/src/root.cc"
 }

@@ -9,6 +9,7 @@
 
 #include "core/node/interface/node.hpp"
 #include "core/renderer/interfaces/renderer.hpp"
+#include "core/utils/timer.hpp"
 
 namespace desomi::core {
 
@@ -19,7 +20,7 @@ namespace desomi::core {
  *        make SDL_Window and SDL_Renderer corresponding to the window and
  *        renderer class.
  */
-class window {
+class Window {
  public:
   /**
    * @brief Custom deleter for SDL_Window
@@ -39,7 +40,7 @@ class window {
     static constexpr int DEFAULT_Y = SDL_WINDOWPOS_CENTERED;
     static constexpr int DEFAULT_W = 800;
     static constexpr int DEFAULT_H = 600;
-    static constexpr int DEFAULT_FRAMERATE = 60;
+    static constexpr uint32_t DEFAULT_FRAMERATE = 60;
     static constexpr Uint32 DEFAULT_FLAGS = SDL_WINDOW_SHOWN;
 
     std::string title{"Desomi"};
@@ -47,7 +48,7 @@ class window {
     int y{DEFAULT_Y};
     int w{DEFAULT_W};
     int h{DEFAULT_H};
-    int framerate{DEFAULT_FRAMERATE};
+    uint32_t framerate{DEFAULT_FRAMERATE};
     Uint32 flags{DEFAULT_FLAGS};
   };
 
@@ -63,23 +64,21 @@ class window {
   std::unique_ptr<SDL_Window, WindowDeleter> window_;
   std::unique_ptr<interfaces::Irenderer> renderer_;
   interfaces::Inode::node_ptr root_;
+  
+  core::utils::timer::VerticalSyncController vsync_;
   const window_config config_;
 
-  uint32_t lask_tick{0};
-  void frame_adjust();
-
  public:
-  explicit window(window_config config);
-  explicit window(const node_init_func& root);
-  window();
-  window(window_config config, const node_init_func& root);
+  explicit Window(window_config config);
+  explicit Window(const node_init_func& root);
+  Window(window_config config, const node_init_func& root);
 
-  ~window() = default;
+  ~Window() = default;
   
-  window(const window&) = delete;
-  window(window&&) = delete;
-  window& operator=(const window&) = delete;
-  window& operator=(window&&) = delete;
+  Window(const Window&) = delete;
+  Window(Window&&) = delete;
+  Window& operator=(const Window&) = delete;
+  Window& operator=(Window&&) = delete;
 
   int run();
 };

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SDL2/SDL_render.h>
+#include <SDL2/SDL_video.h>
 
 #include <memory>
 
@@ -21,6 +22,8 @@ class SDL_RenderAPI final : public interfaces::IrendererAPI {
 
  public:
   explicit SDL_RenderAPI(SDL_Renderer* renderer) : renderer_(renderer) {}
+  SDL_RenderAPI(SDL_Window* window, int index, uint32_t flags)
+      : renderer_(SDL_CreateRenderer(window, index, flags)) {}
   ~SDL_RenderAPI() final = default;
 
   SDL_RenderAPI(const SDL_RenderAPI&) = delete;
@@ -33,17 +36,18 @@ class SDL_RenderAPI final : public interfaces::IrendererAPI {
   void flush() final;
 
   uint32_t get_driver_count() final;
-  void set_draw_color(const utils::color& color_) final;
-  utils::color get_draw_color() final;
+  void set_draw_color(const utils::Color& color_) final;
+  void default_draw_color() final;
+  utils::Color get_draw_color() final;
 
   void draw_point(int x_, int y_) final;
   void draw_line(int x1_, int y1_, int x2_, int y2_) final;
 
-  void draw_rect(const utils::rect& rect_) final;
-  void draw_rects(const std::vector<utils::rect>& rects_) final;
+  void draw_rect(const utils::Rect& rect_) final;
+  void draw_rects(const std::vector<utils::Rect>& rects_) final;
 
-  void fill_rect(const utils::rect& rect_) final;
-  void fill_rects(const std::vector<utils::rect>& rects_) final;
+  void fill_rect(const utils::Rect& rect_) final;
+  void fill_rects(const std::vector<utils::Rect>& rects_) final;
 };
 
 }  // namespace desomi::core::render

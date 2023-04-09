@@ -252,6 +252,13 @@ build CMakeFiles/desomi_playground.dir/desomi/core/renderer/src/sdl_api.cc.o: CX
   OBJECT_DIR = CMakeFiles/desomi_playground.dir
   OBJECT_FILE_DIR = CMakeFiles/desomi_playground.dir/desomi/core/renderer/src
 
+build CMakeFiles/desomi_playground.dir/desomi/core/node/src/rect_node.cc.o: CXX_COMPILER__desomi_playground_Debug /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/node/src/rect_node.cc || cmake_object_order_depends_target_desomi_playground
+  DEP_FILE = CMakeFiles/desomi_playground.dir/desomi/core/node/src/rect_node.cc.o.d
+  FLAGS = -g -std=gnu++20
+  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi
+  OBJECT_DIR = CMakeFiles/desomi_playground.dir
+  OBJECT_FILE_DIR = CMakeFiles/desomi_playground.dir/desomi/core/node/src
+
 build CMakeFiles/desomi_playground.dir/desomi/core/node/src/root.cc.o: CXX_COMPILER__desomi_playground_Debug /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/node/src/root.cc || cmake_object_order_depends_target_desomi_playground
   DEP_FILE = CMakeFiles/desomi_playground.dir/desomi/core/node/src/root.cc.o.d
   FLAGS = -g -std=gnu++20
@@ -267,7 +274,7 @@ build CMakeFiles/desomi_playground.dir/desomi/core/node/src/root.cc.o: CXX_COMPI
 #############################################
 # Link the executable desomi_playground
 
-build desomi_playground: CXX_EXECUTABLE_LINKER__desomi_playground_Debug CMakeFiles/desomi_playground.dir/main.cpp.o CMakeFiles/desomi_playground.dir/desomi/core/src/utils.cpp.o CMakeFiles/desomi_playground.dir/desomi/core/src/window.cpp.o CMakeFiles/desomi_playground.dir/desomi/core/renderer/src/bfs.cc.o CMakeFiles/desomi_playground.dir/desomi/core/renderer/src/sdl_api.cc.o CMakeFiles/desomi_playground.dir/desomi/core/node/src/root.cc.o
+build desomi_playground: CXX_EXECUTABLE_LINKER__desomi_playground_Debug CMakeFiles/desomi_playground.dir/main.cpp.o CMakeFiles/desomi_playground.dir/desomi/core/src/utils.cpp.o CMakeFiles/desomi_playground.dir/desomi/core/src/window.cpp.o CMakeFiles/desomi_playground.dir/desomi/core/renderer/src/bfs.cc.o CMakeFiles/desomi_playground.dir/desomi/core/renderer/src/sdl_api.cc.o CMakeFiles/desomi_playground.dir/desomi/core/node/src/rect_node.cc.o CMakeFiles/desomi_playground.dir/desomi/core/node/src/root.cc.o
   FLAGS = -g
   LINK_FLAGS = -rdynamic
   LINK_LIBRARIES = -lSDL2  -lSDL2_image
