@@ -1,5 +1,6 @@
 #pragma once
 
+#include <functional>
 #include <memory>
 #include <vector>
 
@@ -11,6 +12,7 @@ class Inode : public std::enable_shared_from_this<Inode> {
  public:
   using node_ptr = std::shared_ptr<Inode>;
   using node_weak_ptr = std::weak_ptr<Inode>;
+  using node_init_func = std::function<node_ptr()>;
 
  protected:
   std::vector<node_ptr> children_;
@@ -28,26 +30,48 @@ class Inode : public std::enable_shared_from_this<Inode> {
   }
 
   // Seems that these methods don't need to be virtual.
+  /**
+   * @brief Insert a child to the node.
+   * 
+   * @param child Raw pointer to the child.
+   * @return node_ptr Pointer to current node for chaining.
+   */
   inline node_ptr add_child(Inode* child) {
     children_.push_back(child->shared_from_this());
     child->set_parent(this);
     return this->shared_from_this();
   }
+
+  /**
+   * @brief Insert a child to the node.
+   * 
+   * @param child Shared pointer to the child.
+   * @return node_ptr Pointer to current node for chaining.
+   */
   inline node_ptr add_child(const node_ptr& child) {
     children_.push_back(child);
     child->set_parent(this);
     return this->shared_from_this();
   }
-  inline node_ptr add_scope(Inode* child) {
-    children_.push_back(child->shared_from_this());
-    child->set_parent(this);
-    return child->shared_from_this();
-  }
-  inline node_ptr add_scope(const node_ptr& child) {
+
+  /**
+   * @brief Insert a Node Tree to the node.
+   * 
+   * @param scope Function that returns a node_ptr.
+   * @return node_ptr Pointer to current node for chaining.
+   */
+  inline node_ptr add_scope(const node_init_func& scope) {
+    auto child = scope();
     children_.push_back(child);
     child->set_parent(this);
-    return child->shared_from_this();
+    return this->shared_from_this();
   }
+  
+  /**
+   * @brief Return to the parent node.
+   * 
+   * @return node_ptr Pointer to the parent node.
+   */
   inline node_ptr end() { return parent_.lock(); }
 
   // TODO: add a way to remove a child

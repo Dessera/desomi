@@ -4,6 +4,7 @@
 #include <SDL2/SDL_render.h>
 #include <SDL2/SDL_video.h>
 
+#include <atomic>
 #include <utility>
 
 #include "SDL2/SDL_events.h"
@@ -15,26 +16,18 @@
 
 using desomi::core::Window;
 
-Window::Window(window_config config) : config_{std::move(config)} {
-  window_ = std::unique_ptr<SDL_Window, WindowDeleter>{
-      SDL_CreateWindow(config_.title.c_str(), config_.x, config_.y, config_.w,
-                       config_.h, config_.flags),
-      WindowDeleter{}};
-  if (!window_) {
-    throw std::runtime_error{SDL_GetError()};
-  }
+Window::Window(WindowConfig config) : config_{std::move(config)} {
   // TODO: This should be non-static.
-  // TODO: error check
   renderer_ =
       RendererFactory<render::RendererBFS, render::SDL_RenderAPI>::create(
-          window_.get(), -1, SDL_RENDERER_ACCELERATED);
+          config_);
   vsync_.set_fps(config_.framerate);
 }
 
-Window::Window(const node_init_func& root) : Window{window_config{}} {
+Window::Window(const root_init_func& root) : Window{WindowConfig{}} {
   root_ = root(config_);
 }
-Window::Window(window_config config, const node_init_func& root)
+Window::Window(WindowConfig config, const root_init_func& root)
     : Window{std::move(config)} {
   root_ = root(config_);
 }

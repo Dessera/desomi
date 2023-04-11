@@ -23,33 +23,25 @@ namespace desomi::core {
 class Window {
  public:
   /**
-   * @brief Custom deleter for SDL_Window
-   *
-   */
-  using WindowDeleter = struct wdeleter {
-    void operator()(SDL_Window* window) const { SDL_DestroyWindow(window); }
-  };
-
-  /**
    * @brief The window_config struct
    *        The window_config struct is used to configure the window.
    *        The default value is set as static constexpr member.
    */
-  using window_config = struct wconfig {
-    static constexpr int DEFAULT_X = SDL_WINDOWPOS_CENTERED;
-    static constexpr int DEFAULT_Y = SDL_WINDOWPOS_CENTERED;
-    static constexpr int DEFAULT_W = 800;
-    static constexpr int DEFAULT_H = 600;
+  using WindowConfig = struct wconfig {
+    static constexpr int32_t DEFAULT_X = 0x2FFF0000u | 0;
+    static constexpr int32_t DEFAULT_Y = 0x2FFF0000u | 0;
+    static constexpr int32_t DEFAULT_W = 800;
+    static constexpr int32_t DEFAULT_H = 600;
     static constexpr uint32_t DEFAULT_FRAMERATE = 60;
-    static constexpr Uint32 DEFAULT_FLAGS = SDL_WINDOW_SHOWN;
+    static constexpr uint32_t DEFAULT_FLAGS = SDL_WINDOW_SHOWN;
 
     std::string title{"Desomi"};
-    int x{DEFAULT_X};
-    int y{DEFAULT_Y};
-    int w{DEFAULT_W};
-    int h{DEFAULT_H};
+    int32_t x{DEFAULT_X};
+    int32_t y{DEFAULT_Y};
+    int32_t w{DEFAULT_W};
+    int32_t h{DEFAULT_H};
     uint32_t framerate{DEFAULT_FRAMERATE};
-    Uint32 flags{DEFAULT_FLAGS};
+    uint32_t flags{DEFAULT_FLAGS};
   };
 
   /**
@@ -57,30 +49,34 @@ class Window {
    *        The node_init_func type is used to initialize the root node.
    *        The function should return a node::node_ptr.
    */
-  using node_init_func =
-      std::function<interfaces::Inode::node_ptr(const window_config& config)>;
+  using root_init_func =
+      std::function<interfaces::Inode::node_ptr(const WindowConfig& config)>;
 
  private:
-  std::unique_ptr<SDL_Window, WindowDeleter> window_;
   std::unique_ptr<interfaces::Irenderer> renderer_;
   interfaces::Inode::node_ptr root_;
-  
+
   core::utils::timer::VerticalSyncController vsync_;
-  const window_config config_;
+  const WindowConfig config_;
+
+  explicit Window(WindowConfig config);
+  explicit Window(const root_init_func& root);
+  Window(WindowConfig config, const root_init_func& root);
 
  public:
-  explicit Window(window_config config);
-  explicit Window(const node_init_func& root);
-  Window(window_config config, const node_init_func& root);
-
   ~Window() = default;
-  
+
   Window(const Window&) = delete;
   Window(Window&&) = delete;
   Window& operator=(const Window&) = delete;
   Window& operator=(Window&&) = delete;
 
   int run();
+
+  static Window* create(auto... args) {
+    static auto *window = new Window(std::forward<decltype(args)>(args)...);
+    return window;
+  }
 };
 
 }  // namespace desomi::core

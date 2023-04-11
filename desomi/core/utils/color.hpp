@@ -21,7 +21,7 @@ class Color {
 
   Color() = default;
   explicit Color(uint32_t color);
-  explicit Color(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha = 0xFF);
+  explicit Color(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha = 0xFF) noexcept;
 
   [[nodiscard]]
 
@@ -41,14 +41,24 @@ class Color {
   uint8_t alpha_{0xFF};
 
  public:
-  static constexpr uint32_t WHITE = 0xFFFFFFFF;
-  static constexpr uint32_t BLACK = 0x000000FF;
-  static constexpr uint32_t RED = 0xFF0000FF;
-  static constexpr uint32_t GREEN = 0x00FF00FF;
-  static constexpr uint32_t BLUE = 0x0000FFFF;
-  static constexpr uint32_t YELLOW = 0xFFFF00FF;
-  static constexpr uint32_t MAGENTA = 0xFF00FFFF;
-  static constexpr uint32_t CYAN = 0x00FFFFFF;
+  // static constexpr uint32_t WHITE = 0xFFFFFFFF;
+  // static constexpr uint32_t BLACK = 0x000000FF;
+  // static constexpr uint32_t RED = 0xFF0000FF;
+  // static constexpr uint32_t GREEN = 0x00FF00FF;
+  // static constexpr uint32_t BLUE = 0x0000FFFF;
+  // static constexpr uint32_t YELLOW = 0xFFFF00FF;
+  // static constexpr uint32_t MAGENTA = 0xFF00FFFF;
+  // static constexpr uint32_t CYAN = 0x00FFFFFF;
+
+  static const Color WHITE;
+  static const Color BLACK;
+  static const Color RED;
+  static const Color GREEN;
+  static const Color BLUE;
+  static const Color YELLOW;
+  static const Color MAGENTA;
+  static const Color CYAN;
+
 };
 
 }  // namespace desomi::core::utils

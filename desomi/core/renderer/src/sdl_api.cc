@@ -1,10 +1,29 @@
 
 #include "core/renderer/api/sdl_api.hpp"
 
+#include <SDL2/SDL.h>
+
 #include "core/utils/color.hpp"
 
 using desomi::core::render::SDL_RenderAPI;
 using color = desomi::core::utils::Color;
+
+SDL_RenderAPI::SDL_RenderAPI(const core::Window::WindowConfig& config_) {
+  SDL_Init(SDL_INIT_VIDEO);
+  window_ = std::unique_ptr<SDL_Window, SDL_WindowDeleter>{
+      SDL_CreateWindow(config_.title.c_str(), config_.x, config_.y, config_.w,
+                       config_.h, SDL_WINDOW_SHOWN),
+      SDL_WindowDeleter{}};
+  if (!window_) {
+    throw std::runtime_error("Failed to create window");
+  }
+  renderer_ = std::unique_ptr<SDL_Renderer, SDL_RendererDeleter>{
+      SDL_CreateRenderer(window_.get(), -1, SDL_RENDERER_ACCELERATED),
+      SDL_RendererDeleter{}};
+  if (!renderer_) {
+    throw std::runtime_error("Failed to create renderer");
+  }
+}
 
 void SDL_RenderAPI::clear() { SDL_RenderClear(renderer_.get()); }
 

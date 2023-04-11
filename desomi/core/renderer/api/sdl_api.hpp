@@ -7,6 +7,7 @@
 
 #include "core/renderer/interfaces/render_api.hpp"
 #include "core/renderer/interfaces/renderer.hpp"
+#include "core/window/window.hpp"
 
 namespace desomi::core::render {
 
@@ -18,12 +19,15 @@ class SDL_RenderAPI final : public interfaces::IrendererAPI {
     }
   };
 
+  using SDL_WindowDeleter = struct wdeleter {
+    void operator()(SDL_Window* window) const { SDL_DestroyWindow(window); }
+  };
+
   std::unique_ptr<SDL_Renderer, SDL_RendererDeleter> renderer_;
+  std::unique_ptr<SDL_Window, SDL_WindowDeleter> window_;
 
  public:
-  explicit SDL_RenderAPI(SDL_Renderer* renderer) : renderer_(renderer) {}
-  SDL_RenderAPI(SDL_Window* window, int index, uint32_t flags)
-      : renderer_(SDL_CreateRenderer(window, index, flags)) {}
+  explicit SDL_RenderAPI(const core::Window::WindowConfig& config_);
   ~SDL_RenderAPI() final = default;
 
   SDL_RenderAPI(const SDL_RenderAPI&) = delete;
