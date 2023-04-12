@@ -32,7 +32,7 @@ class Inode : public std::enable_shared_from_this<Inode> {
   // Seems that these methods don't need to be virtual.
   /**
    * @brief Insert a child to the node.
-   * 
+   *
    * @param child Raw pointer to the child.
    * @return node_ptr Pointer to current node for chaining.
    */
@@ -44,7 +44,7 @@ class Inode : public std::enable_shared_from_this<Inode> {
 
   /**
    * @brief Insert a child to the node.
-   * 
+   *
    * @param child Shared pointer to the child.
    * @return node_ptr Pointer to current node for chaining.
    */
@@ -56,7 +56,7 @@ class Inode : public std::enable_shared_from_this<Inode> {
 
   /**
    * @brief Insert a Node Tree to the node.
-   * 
+   *
    * @param scope Function that returns a node_ptr.
    * @return node_ptr Pointer to current node for chaining.
    */
@@ -66,25 +66,34 @@ class Inode : public std::enable_shared_from_this<Inode> {
     child->set_parent(this);
     return this->shared_from_this();
   }
-  
+
   /**
    * @brief Return to the parent node.
-   * 
+   *
    * @return node_ptr Pointer to the parent node.
    */
   inline node_ptr end() { return parent_.lock(); }
 
   // TODO: add a way to remove a child
-  inline virtual std::vector<node_ptr>& children() { return children_; };
-  inline virtual node_weak_ptr parent() { return parent_; };
+  inline std::vector<node_ptr>& children() { return children_; };
+  inline node_weak_ptr parent() { return parent_; };
 
   // TODO: Think another way to do this.
   node_ptr root() {
+    // auto parent = parent_.lock();
+    // if (parent == nullptr) {
+    //   return shared_from_this();
+    // }
+    // return parent->root();
+
+    // implement a loop instead of recursion
     auto parent = parent_.lock();
-    if (parent == nullptr) {
-      return shared_from_this();
+    auto current = shared_from_this();
+    while (parent != nullptr) {
+      current = parent;
+      parent = parent->parent_.lock();
     }
-    return parent->root();
+    return current;
   }
 
   template <typename T>
