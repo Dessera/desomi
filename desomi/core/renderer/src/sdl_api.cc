@@ -2,6 +2,7 @@
 #include "core/renderer/api/sdl_api.hpp"
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_video.h>
 
 #include "core/utils/color.hpp"
 
@@ -11,8 +12,9 @@ using color = desomi::core::utils::Color;
 SDL_RenderAPI::SDL_RenderAPI(const core::Window::WindowConfig& config_) {
   SDL_Init(SDL_INIT_VIDEO);
   window_ = std::unique_ptr<SDL_Window, SDL_WindowDeleter>{
-      SDL_CreateWindow(config_.title.c_str(), config_.x, config_.y, config_.w,
-                       config_.h, SDL_WINDOW_SHOWN),
+      SDL_CreateWindow(config_.title.c_str(), SDL_WINDOWPOS_CENTERED,
+                       SDL_WINDOWPOS_CENTERED, config_.w, config_.h,
+                       SDL_WINDOW_SHOWN),
       SDL_WindowDeleter{}};
   if (!window_) {
     throw std::runtime_error("Failed to create window");

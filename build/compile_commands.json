@@ -6,32 +6,42 @@
 },
 {
   "directory": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/build",
-  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -std=gnu++20 -o CMakeFiles/desomi_playground.dir/desomi/core/src/utils.cpp.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/src/utils.cpp",
-  "file": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/src/utils.cpp"
-},
-{
-  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/build",
-  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -std=gnu++20 -o CMakeFiles/desomi_playground.dir/desomi/core/src/window.cpp.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/src/window.cpp",
-  "file": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/src/window.cpp"
-},
-{
-  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/build",
-  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -std=gnu++20 -o CMakeFiles/desomi_playground.dir/desomi/core/renderer/src/bfs.cc.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/renderer/src/bfs.cc",
-  "file": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/renderer/src/bfs.cc"
-},
-{
-  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/build",
-  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -std=gnu++20 -o CMakeFiles/desomi_playground.dir/desomi/core/renderer/src/sdl_api.cc.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/renderer/src/sdl_api.cc",
-  "file": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/renderer/src/sdl_api.cc"
-},
-{
-  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/build",
-  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -std=gnu++20 -o CMakeFiles/desomi_playground.dir/desomi/core/node/src/rect_node.cc.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/node/src/rect_node.cc",
+  "command": "/usr/bin/clang++ -Ddesomi_core_EXPORTS -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -fPIC -std=gnu++20 -o desomi/core/CMakeFiles/desomi_core.dir/node/src/rect_node.cc.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/node/src/rect_node.cc",
   "file": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/node/src/rect_node.cc"
 },
 {
   "directory": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/build",
-  "command": "/usr/bin/clang++ -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -std=gnu++20 -o CMakeFiles/desomi_playground.dir/desomi/core/node/src/root.cc.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/node/src/root.cc",
+  "command": "/usr/bin/clang++ -Ddesomi_core_EXPORTS -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -fPIC -std=gnu++20 -o desomi/core/CMakeFiles/desomi_core.dir/node/src/root.cc.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/node/src/root.cc",
   "file": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/node/src/root.cc"
+},
+{
+  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/build",
+  "command": "/usr/bin/clang++ -Ddesomi_core_EXPORTS -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -fPIC -std=gnu++20 -o desomi/core/CMakeFiles/desomi_core.dir/renderer/src/bfs.cc.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/renderer/src/bfs.cc",
+  "file": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/renderer/src/bfs.cc"
+},
+{
+  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/build",
+  "command": "/usr/bin/clang++ -Ddesomi_core_EXPORTS -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -fPIC -std=gnu++20 -o desomi/core/CMakeFiles/desomi_core.dir/renderer/src/sdl_api.cc.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/renderer/src/sdl_api.cc",
+  "file": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/renderer/src/sdl_api.cc"
+},
+{
+  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/build",
+  "command": "/usr/bin/clang++ -Ddesomi_core_EXPORTS -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -fPIC -std=gnu++20 -o desomi/core/CMakeFiles/desomi_core.dir/utils/src/utils.cpp.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/utils/src/utils.cpp",
+  "file": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/utils/src/utils.cpp"
+},
+{
+  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/build",
+  "command": "/usr/bin/clang++ -Ddesomi_core_EXPORTS -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -fPIC -std=gnu++20 -o desomi/core/CMakeFiles/desomi_core.dir/window/src/window.cpp.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/window/src/window.cpp",
+  "file": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/window/src/window.cpp"
+},
+{
+  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/build",
+  "command": "/usr/bin/clang++ -Ddesomi_core_EXPORTS -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -fPIC -std=gnu++20 -o desomi/core/CMakeFiles/desomi_core.dir/plugins/src/manager.cc.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/plugins/src/manager.cc",
+  "file": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/plugins/src/manager.cc"
+},
+{
+  "directory": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/build",
+  "command": "/usr/bin/clang++ -Ddesomi_core_EXPORTS -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi -g -fPIC -std=gnu++20 -o desomi/core/CMakeFiles/desomi_core.dir/plugins/src/vsync.cc.o -c /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/plugins/src/vsync.cc",
+  "file": "/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/plugins/src/vsync.cc"
 }
 ]

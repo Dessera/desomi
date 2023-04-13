@@ -1,0 +1,10 @@
+aux_source_directory(node/src NODE_SRC)
+aux_source_directory(renderer/src RENDERER_SRC)
+aux_source_directory(utils/src UTILS_SRC)
+aux_source_directory(window/src WINDOW_SRC)
+aux_source_directory(plugins/src PLUGINS_SRC)
+
+add_library(desomi_core SHARED ${CORE_SRC} ${NODE_SRC} ${RENDERER_SRC} ${UTILS_SRC} ${WINDOW_SRC} ${PLUGINS_SRC})
+target_link_libraries(desomi_core SDL2 SDL2_image)
+target_include_directories(desomi_core PUBLIC ${PROJECT_SOURCE_DIR}/desomi)
+# link_libraries(SDL2 SDL2_image)

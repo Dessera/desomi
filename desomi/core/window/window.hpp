@@ -11,16 +11,15 @@
  *
  */
 
-#include <SDL2/SDL_video.h>
-
 #include <cstdint>
 #include <functional>
 #include <memory>
 #include <string>
 
 #include "core/node/interface/node.hpp"
+#include "core/plugins/api/plugin.hpp"
+#include "core/plugins/manager.hpp"
 #include "core/renderer/interfaces/renderer.hpp"
-#include "core/utils/timer.hpp"
 
 namespace desomi::core {
 
@@ -41,20 +40,14 @@ class Window {
    *       Base Class.
    */
   using WindowConfig = struct wconfig {
-    static constexpr int32_t DEFAULT_X = 0x2FFF0000U | 0;
-    static constexpr int32_t DEFAULT_Y = 0x2FFF0000U | 0;
     static constexpr int32_t DEFAULT_W = 800;
     static constexpr int32_t DEFAULT_H = 600;
     static constexpr uint32_t DEFAULT_FRAMERATE = 60;
-    static constexpr uint32_t DEFAULT_FLAGS = SDL_WINDOW_SHOWN;
 
     std::string title{"Desomi"};
-    int32_t x{DEFAULT_X};
-    int32_t y{DEFAULT_Y};
     int32_t w{DEFAULT_W};
     int32_t h{DEFAULT_H};
     uint32_t framerate{DEFAULT_FRAMERATE};
-    uint32_t flags{DEFAULT_FLAGS};
   };
 
   /**
@@ -81,12 +74,10 @@ class Window {
   interfaces::Inode::node_ptr root_;
 
   /**
-   * @brief Temporally save of VerticalSyncController
-   *        The VerticalSyncController is used to control the framerate.
-   *        TODO: I'm considering to move it to a plugin manager
+   * @brief Plugin manager
    *
    */
-  core::utils::timer::VerticalSyncController vsync_;
+  std::unique_ptr<plugins::PluginManager> plugins_;
 
   /**
    * @brief A common config for the window

@@ -32,3 +32,14 @@
 /home/dessera/Desktop/CppWorkspace/SDL/desomi/build/CMakeFiles/test.dir
 /home/dessera/Desktop/CppWorkspace/SDL/desomi/build/CMakeFiles/edit_cache.dir
 /home/dessera/Desktop/CppWorkspace/SDL/desomi/build/CMakeFiles/rebuild_cache.dir
+/home/dessera/Desktop/CppWorkspace/SDL/desomi/build/desomi/CMakeFiles/package.dir
+/home/dessera/Desktop/CppWorkspace/SDL/desomi/build/desomi/CMakeFiles/package_source.dir
+/home/dessera/Desktop/CppWorkspace/SDL/desomi/build/desomi/CMakeFiles/test.dir
+/home/dessera/Desktop/CppWorkspace/SDL/desomi/build/desomi/CMakeFiles/edit_cache.dir
+/home/dessera/Desktop/CppWorkspace/SDL/desomi/build/desomi/CMakeFiles/rebuild_cache.dir
+/home/dessera/Desktop/CppWorkspace/SDL/desomi/build/desomi/core/CMakeFiles/desomi_core.dir
+/home/dessera/Desktop/CppWorkspace/SDL/desomi/build/desomi/core/CMakeFiles/package.dir
+/home/dessera/Desktop/CppWorkspace/SDL/desomi/build/desomi/core/CMakeFiles/package_source.dir
+/home/dessera/Desktop/CppWorkspace/SDL/desomi/build/desomi/core/CMakeFiles/test.dir
+/home/dessera/Desktop/CppWorkspace/SDL/desomi/build/desomi/core/CMakeFiles/edit_cache.dir
+/home/dessera/Desktop/CppWorkspace/SDL/desomi/build/desomi/core/CMakeFiles/rebuild_cache.dir

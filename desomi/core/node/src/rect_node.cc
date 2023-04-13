@@ -10,6 +10,7 @@ RectNode::RectNode(int32_t x, int32_t y, int32_t width, int32_t height,
 RectNode::RectNode(utils::Rect rect) : rect_(rect), color_(0, 0, 0, 255) {}
 
 void RectNode::render(interfaces::IrendererAPI* renderer) {
+  rect_.move();
   renderer->set_draw_color(color_);
   renderer->fill_rect(rect_);
   renderer->default_draw_color();

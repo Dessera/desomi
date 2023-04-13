@@ -9,14 +9,15 @@ set(CMAKE_CXX_STANDARD 20)
 include(CTest)
 enable_testing()
 
-include_directories(${PROJECT_SOURCE_DIR}/desomi)
-aux_source_directory(${PROJECT_SOURCE_DIR}/desomi/core/src CORE_SRC)
-aux_source_directory(${PROJECT_SOURCE_DIR}/desomi/core/renderer/src RENDERER_SRC)
-aux_source_directory(${PROJECT_SOURCE_DIR}/desomi/core/node/src NODE_SRC)
+# include_directories(${PROJECT_SOURCE_DIR}/desomi)
+# aux_source_directory(${PROJECT_SOURCE_DIR}/desomi/core/src CORE_SRC)
+# aux_source_directory(${PROJECT_SOURCE_DIR}/desomi/core/renderer/src RENDERER_SRC)
+# aux_source_directory(${PROJECT_SOURCE_DIR}/desomi/core/node/src NODE_SRC)
 
-link_libraries(SDL2 SDL2_image)
+add_subdirectory(${PROJECT_SOURCE_DIR}/desomi)
 
-add_executable(desomi_playground main.cpp ${CORE_SRC} ${RENDERER_SRC} ${NODE_SRC})
+add_executable(desomi_playground main.cpp)
+target_link_libraries(desomi_playground desomi_core)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

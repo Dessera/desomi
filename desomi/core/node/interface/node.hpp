@@ -1,5 +1,16 @@
 #pragma once
 
+/**
+ * @file node.hpp
+ * @author Dessera (1533653159@qq.com)
+ * @brief Inode base class (or interface but not really).
+ * @version 0.1
+ * @date 2023-04-12
+ *
+ * @copyright Copyright (c) 2023
+ *
+ */
+
 #include <functional>
 #include <memory>
 #include <vector>
@@ -8,6 +19,11 @@
 
 namespace desomi::core::interfaces {
 
+/**
+ * @brief Base class for all nodes.
+ *        To create a custom node, derive from this class and implement the
+ * render method.
+ */
 class Inode : public std::enable_shared_from_this<Inode> {
  public:
   using node_ptr = std::shared_ptr<Inode>;
@@ -15,13 +31,46 @@ class Inode : public std::enable_shared_from_this<Inode> {
   using node_init_func = std::function<node_ptr()>;
 
  protected:
+  /**
+   * @brief Children of the node.
+   *
+   */
   std::vector<node_ptr> children_;
+
+  /**
+   * @brief Parent of the node.
+   *
+   */
   node_weak_ptr parent_;
+
+ private:
+  /**
+   * @brief An implementation of add_child.
+   *
+   * @param child shared pointer to the child.
+   * @return node_ptr self pointer for chaining.
+   */
+  inline node_ptr add_child_impl_(const node_ptr& child) {
+    children_.push_back(child->shared_from_this());
+    child->set_parent(this);
+    return this->shared_from_this();
+  }
 
  public:
   virtual ~Inode() = default;
+
+  /**
+   * @brief Render the node, Only render the node itself, not the children.
+   *
+   * @param renderer Renderer API derived from IrendererAPI.
+   */
   virtual void render(IrendererAPI* renderer) = 0;
 
+  /**
+   * @brief Set the parent object, always use inside add_child.
+   *
+   * @param parent Parent node.
+   */
   inline void set_parent(Inode* parent) {
     if (parent == nullptr) {
       return;
@@ -29,7 +78,6 @@ class Inode : public std::enable_shared_from_this<Inode> {
     parent_ = parent->weak_from_this();
   }
 
-  // Seems that these methods don't need to be virtual.
   /**
    * @brief Insert a child to the node.
    *
@@ -37,9 +85,7 @@ class Inode : public std::enable_shared_from_this<Inode> {
    * @return node_ptr Pointer to current node for chaining.
    */
   inline node_ptr add_child(Inode* child) {
-    children_.push_back(child->shared_from_this());
-    child->set_parent(this);
-    return this->shared_from_this();
+    return add_child_impl_(child->shared_from_this());
   }
 
   /**
@@ -49,9 +95,7 @@ class Inode : public std::enable_shared_from_this<Inode> {
    * @return node_ptr Pointer to current node for chaining.
    */
   inline node_ptr add_child(const node_ptr& child) {
-    children_.push_back(child);
-    child->set_parent(this);
-    return this->shared_from_this();
+    return add_child_impl_(child);
   }
 
   /**
@@ -62,8 +106,20 @@ class Inode : public std::enable_shared_from_this<Inode> {
    */
   inline node_ptr add_scope(const node_init_func& scope) {
     auto child = scope();
-    children_.push_back(child);
-    child->set_parent(this);
+    return add_child_impl_(child);
+  }
+
+  /**
+   * @brief Remove a child from the node.
+   *
+   * @param child Target child.
+   * @return node_ptr self pointer for chaining.
+   */
+  inline node_ptr remove_child(const node_ptr& child) {
+    auto it = std::find(children_.begin(), children_.end(), child);
+    if (it != children_.end()) {
+      children_.erase(it);
+    }
     return this->shared_from_this();
   }
 
@@ -74,19 +130,17 @@ class Inode : public std::enable_shared_from_this<Inode> {
    */
   inline node_ptr end() { return parent_.lock(); }
 
-  // TODO: add a way to remove a child
   inline std::vector<node_ptr>& children() { return children_; };
   inline node_weak_ptr parent() { return parent_; };
 
-  // TODO: Think another way to do this.
+  /**
+   * @brief Return to the root node.
+   *
+   * @return node_ptr Root node.
+   * @note This method was originally implemented by recursion, but now it is a
+   *       cycle.
+   */
   node_ptr root() {
-    // auto parent = parent_.lock();
-    // if (parent == nullptr) {
-    //   return shared_from_this();
-    // }
-    // return parent->root();
-
-    // implement a loop instead of recursion
     auto parent = parent_.lock();
     auto current = shared_from_this();
     while (parent != nullptr) {
@@ -96,6 +150,14 @@ class Inode : public std::enable_shared_from_this<Inode> {
     return current;
   }
 
+  /**
+   * @brief Create a node object.
+   * 
+   * @tparam T Concrete node type.
+   * @param args Constructor arguments.
+   * @return node_ptr Created node.
+   * TODO: Think a new way to make it overridable for custom node.
+   */
   template <typename T>
   inline static node_ptr create(auto... args) {
     return std::make_shared<T>(args...);
