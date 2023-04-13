@@ -2,6 +2,12 @@
 
 using desomi::core::plugins::VeriticalVsyncController;
 
-void VeriticalVsyncController::on_window_run() { enable(); }
+void VeriticalVsyncController::on_window_run(
+    interfaces::Inode::node_ptr& /*root*/) {
+  enable();
+}
 
-void VeriticalVsyncController::on_frame_end() { wait(); }
+void VeriticalVsyncController::on_frame_end(
+    interfaces::Inode::node_ptr& /*root*/) {
+  wait();
+}

@@ -3,9 +3,10 @@
 #include <cstdint>
 
 #include "core/node/interface/node.hpp"
+#include "core/utils/create.hpp"
 namespace desomi::core::node {
 
-class RectNode : public interfaces::Inode {
+class RectNode : public interfaces::Inode, public utils::UseSharedCreate<RectNode> {
  private:
   utils::Rect rect_;
   utils::Color color_;

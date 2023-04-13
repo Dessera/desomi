@@ -2,11 +2,13 @@
 
 #include "core/node/interface/node.hpp"
 #include "core/utils/color.hpp"
+#include "core/utils/create.hpp"
 #include "core/utils/rect.hpp"
 
 namespace desomi::core::node {
 
-class Root final : public interfaces::Inode {
+class Root final : public interfaces::Inode,
+                   public utils::UseSharedCreate<Root> {
  private:
   utils::Rect viewport_;
 

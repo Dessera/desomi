@@ -1,11 +1,15 @@
 #pragma once
 
+#include <iostream>
 #include "SDL2/SDL_timer.h"
 #include "core/plugins/api/plugin.hpp"
+#include "core/utils/create.hpp"
 
 namespace desomi::core::plugins {
 
-class VeriticalVsyncController final : public interfaces::Iplugin {
+class VeriticalVsyncController final
+    : public interfaces::Iplugin,
+      public utils::UseUniqueCreate<VeriticalVsyncController> {
  public:
   VeriticalVsyncController() = default;
   explicit VeriticalVsyncController(uint32_t fps) : fps_(fps) {}
@@ -17,12 +21,12 @@ class VeriticalVsyncController final : public interfaces::Iplugin {
   VeriticalVsyncController(VeriticalVsyncController&&) = delete;
   VeriticalVsyncController& operator=(VeriticalVsyncController&&) = delete;
 
-  void on_window_run() final;
-  void on_frame_end() final;
+  void on_window_run(interfaces::Inode::node_ptr& root) final;
+  void on_frame_end(interfaces::Inode::node_ptr& root) final;
 
-  void on_window_create() final {}
-  void on_window_destroy() final {}
-  void on_frame_start() final {}
+  void on_window_create(interfaces::Inode::node_ptr& root) final {}
+  void on_window_destroy(interfaces::Inode::node_ptr& root) final {}
+  void on_frame_start(interfaces::Inode::node_ptr& root) final {}
 
   inline void enable() {
     enabled_ = true;

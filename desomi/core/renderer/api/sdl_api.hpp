@@ -1,5 +1,6 @@
 #pragma once
 
+#include <SDL2/SDL.h>
 #include <SDL2/SDL_render.h>
 #include <SDL2/SDL_video.h>
 
@@ -28,7 +29,7 @@ class SDL_RenderAPI final : public interfaces::IrendererAPI {
 
  public:
   explicit SDL_RenderAPI(const core::Window::WindowConfig& config_);
-  ~SDL_RenderAPI() final = default;
+  ~SDL_RenderAPI() final { SDL_Quit(); };
 
   SDL_RenderAPI(const SDL_RenderAPI&) = delete;
   SDL_RenderAPI(SDL_RenderAPI&&) = delete;

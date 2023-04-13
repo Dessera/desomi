@@ -20,6 +20,7 @@
 #include "core/plugins/api/plugin.hpp"
 #include "core/plugins/manager.hpp"
 #include "core/renderer/interfaces/renderer.hpp"
+#include "core/utils/create.hpp"
 
 namespace desomi::core {
 
@@ -30,7 +31,9 @@ namespace desomi::core {
  *        make SDL_Window and SDL_Renderer corresponding to the window and
  *        renderer class.
  */
-class Window {
+class Window : public utils::UseSingletonCreate<Window> {
+  friend class utils::UseSingletonCreate<Window>;
+
  public:
   /**
    * @brief The window_config struct
@@ -57,6 +60,14 @@ class Window {
    */
   using root_init_func =
       std::function<interfaces::Inode::node_ptr(const WindowConfig& config)>;
+
+  /**
+   * @brief The plugin_init_func type
+   *        The plugin_init_func type is used to initialize the plugin manager.
+   *        The function should return a PluginManager.
+   */
+  using plugin_init_func =
+      std::function<std::unique_ptr<plugins::PluginManager>()>;
 
  private:
   /**
@@ -93,7 +104,8 @@ class Window {
    * @param root Function to initialize the root node, please refer to
    *             root_init_func
    */
-  Window(WindowConfig config, const root_init_func& root);
+  Window(WindowConfig config, const root_init_func& root,
+         const plugin_init_func& plugins);
 
   /**
    * @brief Construct a new Window object
@@ -113,6 +125,8 @@ class Window {
    * WindowConfig
    */
   explicit Window(const root_init_func& root);
+
+  Window(const root_init_func& root, const plugin_init_func& plugins);
 
  public:
   ~Window() = default;
@@ -141,10 +155,10 @@ class Window {
    * @return Window* Only one window is allowed, so the create method will
    * return a static pointer defined in the create method.
    */
-  static Window* create(auto... args) {
-    static auto* window = new Window(std::forward<decltype(args)>(args)...);
-    return window;
-  }
+  // static Window* create(auto... args) {
+  //   static auto* window = new Window(std::forward<decltype(args)>(args)...);
+  //   return window;
+  // }
 };
 
 }  // namespace desomi::core
