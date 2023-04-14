@@ -1,28 +1,29 @@
 #pragma once
 
 #include <iostream>
+
 #include "SDL2/SDL_timer.h"
-#include "core/plugins/api/plugin.hpp"
+#include "core/plugins/interfaces/plugin.hpp"
 #include "core/utils/create.hpp"
 
 namespace desomi::core::plugins {
 
-class VeriticalVsyncController final
+class VsyncController final
     : public interfaces::Iplugin,
-      public utils::UseUniqueCreate<VeriticalVsyncController> {
+      public utils::UseSharedCreate<VsyncController> {
  public:
-  VeriticalVsyncController() = default;
-  explicit VeriticalVsyncController(uint32_t fps) : fps_(fps) {}
-  ~VeriticalVsyncController() final = default;
+  VsyncController() = default;
+  explicit VsyncController(uint32_t fps) : fps_(fps) {}
+  ~VsyncController() final = default;
 
-  VeriticalVsyncController(const VeriticalVsyncController&) = delete;
-  VeriticalVsyncController& operator=(const VeriticalVsyncController&) = delete;
+  VsyncController(const VsyncController&) = delete;
+  VsyncController& operator=(const VsyncController&) = delete;
 
-  VeriticalVsyncController(VeriticalVsyncController&&) = delete;
-  VeriticalVsyncController& operator=(VeriticalVsyncController&&) = delete;
+  VsyncController(VsyncController&&) = delete;
+  VsyncController& operator=(VsyncController&&) = delete;
 
-  void on_window_run(interfaces::Inode::node_ptr& root) final;
-  void on_frame_end(interfaces::Inode::node_ptr& root) final;
+  void on_window_run(interfaces::Inode::node_ptr& /*root*/) final { enable(); }
+  void on_frame_end(interfaces::Inode::node_ptr&  /*root*/) final { wait(); }
 
   void on_window_create(interfaces::Inode::node_ptr& root) final {}
   void on_window_destroy(interfaces::Inode::node_ptr& root) final {}

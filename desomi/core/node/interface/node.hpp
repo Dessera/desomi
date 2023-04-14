@@ -149,19 +149,6 @@ class Inode : public std::enable_shared_from_this<Inode> {
     }
     return current;
   }
-
-  /**
-   * @brief Create a node object.
-   *
-   * @tparam T Concrete node type.
-   * @param args Constructor arguments.
-   * @return node_ptr Created node.
-   * TODO: Think a new way to make it overridable for custom node.
-   */
-  // template <typename T>
-  // inline static node_ptr create(auto... args) {
-  //   return std::make_shared<T>(args...);
-  // }
 };
 
 }  // namespace desomi::core::interfaces

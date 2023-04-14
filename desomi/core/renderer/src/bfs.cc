@@ -1,6 +1,6 @@
 #include "core/renderer/template/bfs.hpp"
 
-using desomi::core::render::RendererBFS;
+namespace desomi::core::render {
 
 void RendererBFS::render(interfaces::Inode* node) {
   renderer_api_->clear();
@@ -16,3 +16,5 @@ void RendererBFS::render(interfaces::Inode* node) {
   }
   renderer_api_->present();
 }
+
+}  // namespace desomi::core::render

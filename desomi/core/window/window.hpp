@@ -11,14 +11,13 @@
  *
  */
 
-#include <cstdint>
 #include <functional>
 #include <memory>
 #include <string>
 
 #include "core/node/interface/node.hpp"
-#include "core/plugins/api/plugin.hpp"
-#include "core/plugins/manager.hpp"
+#include "core/plugins/interfaces/plugin.hpp"
+#include "core/plugins/templates/manager.hpp"
 #include "core/renderer/interfaces/renderer.hpp"
 #include "core/utils/create.hpp"
 
@@ -39,8 +38,6 @@ class Window : public utils::UseSingletonCreate<Window> {
    * @brief The window_config struct
    *        The window_config struct is used to configure the window.
    *        The default value is set as static constexpr member.
-   * TODO: Extract the WindowConfig to a separate file, and extract the Abstract
-   *       Base Class.
    */
   using WindowConfig = struct wconfig {
     static constexpr int32_t DEFAULT_W = 800;
@@ -66,8 +63,7 @@ class Window : public utils::UseSingletonCreate<Window> {
    *        The plugin_init_func type is used to initialize the plugin manager.
    *        The function should return a PluginManager.
    */
-  using plugin_init_func =
-      std::function<std::unique_ptr<plugins::PluginManager>()>;
+  using plugin_init_func = std::function<plugins::PluginManager::plugin_ptr()>;
 
  private:
   /**
@@ -88,7 +84,7 @@ class Window : public utils::UseSingletonCreate<Window> {
    * @brief Plugin manager
    *
    */
-  std::unique_ptr<plugins::PluginManager> plugins_;
+  interfaces::Iplugin::plugin_ptr plugins_;
 
   /**
    * @brief A common config for the window
@@ -126,6 +122,15 @@ class Window : public utils::UseSingletonCreate<Window> {
    */
   explicit Window(const root_init_func& root);
 
+  /**
+   * @brief Construct a new Window object
+   *
+   * @param root Function to initialize the root node, please refer to
+   *             root_init_func
+   * @param plugins Function to initialize the plugin manager, please refer to
+   *                plugin_init_func
+   * @note recommend to use this constructor
+   */
   Window(const root_init_func& root, const plugin_init_func& plugins);
 
  public:
@@ -147,18 +152,6 @@ class Window : public utils::UseSingletonCreate<Window> {
    * @return int 0 if the window is closed normally, otherwise -1
    */
   int run();
-
-  /**
-   * @brief Create a Window object
-   *
-   * @param args Constructor arguments of Window
-   * @return Window* Only one window is allowed, so the create method will
-   * return a static pointer defined in the create method.
-   */
-  // static Window* create(auto... args) {
-  //   static auto* window = new Window(std::forward<decltype(args)>(args)...);
-  //   return window;
-  // }
 };
 
 }  // namespace desomi::core

@@ -6,6 +6,7 @@ namespace desomi::core::interfaces {
 
 class Iplugin {
  public:
+  using plugin_ptr = std::shared_ptr<interfaces::Iplugin>;
   virtual ~Iplugin() = default;
 
   virtual void on_window_create(interfaces::Inode::node_ptr& root) = 0;

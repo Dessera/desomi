@@ -6,8 +6,8 @@
 
 #include "core/utils/color.hpp"
 
-using desomi::core::render::SDL_RenderAPI;
-using color = desomi::core::utils::Color;
+namespace desomi::core::render {
+using Color = desomi::core::utils::Color;
 
 SDL_RenderAPI::SDL_RenderAPI(const core::Window::WindowConfig& config_) {
   SDL_Init(SDL_INIT_VIDEO);
@@ -43,13 +43,13 @@ void SDL_RenderAPI::default_draw_color() {
   SDL_SetRenderDrawColor(renderer_.get(), 255, 255, 255, 255);
 }
 
-color SDL_RenderAPI::get_draw_color() {
+Color SDL_RenderAPI::get_draw_color() {
   uint8_t r = 0;
   uint8_t g = 0;
   uint8_t b = 0;
   uint8_t a = 0;
   SDL_GetRenderDrawColor(renderer_.get(), &r, &g, &b, &a);
-  return utils::Color(r, g, b, a);
+  return {r, g, b, a};
 }
 
 void SDL_RenderAPI::draw_point(int x_, int y_) {
@@ -89,3 +89,5 @@ void SDL_RenderAPI::fill_rects(const std::vector<utils::Rect>& rects_) {
   SDL_RenderFillRects(renderer_.get(), sdl_rects.data(),
                       static_cast<int>(sdl_rects.size()));
 }
+
+}  // namespace desomi::core::render

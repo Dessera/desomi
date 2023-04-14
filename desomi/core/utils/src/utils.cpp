@@ -5,9 +5,7 @@
 #include "core/utils/color.hpp"
 #include "core/utils/rect.hpp"
 
-using desomi::core::utils::Color;
-using desomi::core::utils::Rect;
-
+namespace desomi::core::utils {
 Color::Color(uint32_t color)
     : red_((color & static_cast<uint32_t>(color_mask::red)) >>
            static_cast<uint8_t>(color_shift::red)),
@@ -50,3 +48,4 @@ const Color Color::BLUE = Color(0x00, 0x00, 0xFF);
 const Color Color::YELLOW = Color(0xFF, 0xFF, 0x00);
 const Color Color::MAGENTA = Color(0xFF, 0x00, 0xFF);
 const Color Color::CYAN = Color(0x00, 0xFF, 0xFF);
+}  // namespace desomi::core::utils

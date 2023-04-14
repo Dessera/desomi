@@ -21,11 +21,11 @@ class Color {
 
   Color() = default;
   explicit Color(uint32_t color);
-  explicit Color(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha = 0xFF) noexcept;
+  Color(uint8_t red, uint8_t green, uint8_t blue,
+                 uint8_t alpha = 0xFF) noexcept;
 
-  [[nodiscard]]
-
-  inline SDL_Color sdl_color() {
+  // TODO: Problem with this function that it only works for SDL2
+  [[nodiscard]] inline SDL_Color sdl_color() {
     return SDL_Color{red_, green_, blue_, alpha_};
   }
 
@@ -58,7 +58,6 @@ class Color {
   static const Color YELLOW;
   static const Color MAGENTA;
   static const Color CYAN;
-
 };
 
 }  // namespace desomi::core::utils

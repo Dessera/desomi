@@ -10,7 +10,7 @@ namespace desomi::core::interfaces {
 
 class IrendererAPI {
  private:
-  using rect = core::utils::Rect;
+  using Rect = core::utils::Rect;
   using Color = core::utils::Color;
 
  public:
@@ -43,11 +43,11 @@ class IrendererAPI {
   virtual void draw_line(int x1_, int y1_, int x2_, int y2_) = 0;
   // TODO: implement draw lines behavior
 
-  virtual void draw_rect(const rect& rect_) = 0;
-  virtual void draw_rects(const std::vector<rect>& rects_) = 0;
+  virtual void draw_rect(const Rect& rect_) = 0;
+  virtual void draw_rects(const std::vector<Rect>& rects_) = 0;
 
-  virtual void fill_rect(const rect& rect_) = 0;
-  virtual void fill_rects(const std::vector<rect>& rects_) = 0;
+  virtual void fill_rect(const Rect& rect_) = 0;
+  virtual void fill_rects(const std::vector<Rect>& rects_) = 0;
 
   // TODO: implement render copy behavior (need a texture class)
   // TODO: implement render copy ex behavior (need a texture class)

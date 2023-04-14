@@ -659,14 +659,6 @@ build desomi/core/CMakeFiles/desomi_core.dir/plugins/src/manager.cc.o: CXX_COMPI
   OBJECT_DIR = desomi/core/CMakeFiles/desomi_core.dir
   OBJECT_FILE_DIR = desomi/core/CMakeFiles/desomi_core.dir/plugins/src
 
-build desomi/core/CMakeFiles/desomi_core.dir/plugins/src/vsync.cc.o: CXX_COMPILER__desomi_core_Debug /home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi/core/plugins/src/vsync.cc || cmake_object_order_depends_target_desomi_core
-  DEFINES = -Ddesomi_core_EXPORTS
-  DEP_FILE = desomi/core/CMakeFiles/desomi_core.dir/plugins/src/vsync.cc.o.d
-  FLAGS = -g -fPIC -std=gnu++20
-  INCLUDES = -I/home/dessera/Desktop/CppWorkspace/SDL/desomi/desomi
-  OBJECT_DIR = desomi/core/CMakeFiles/desomi_core.dir
-  OBJECT_FILE_DIR = desomi/core/CMakeFiles/desomi_core.dir/plugins/src
-
 
 # =============================================================================
 # Link build statements for SHARED_LIBRARY target desomi_core
@@ -675,7 +667,7 @@ build desomi/core/CMakeFiles/desomi_core.dir/plugins/src/vsync.cc.o: CXX_COMPILE
 #############################################
 # Link the shared library desomi/core/libdesomi_core.so
 
-build desomi/core/libdesomi_core.so: CXX_SHARED_LIBRARY_LINKER__desomi_core_Debug desomi/core/CMakeFiles/desomi_core.dir/node/src/rect_node.cc.o desomi/core/CMakeFiles/desomi_core.dir/node/src/root.cc.o desomi/core/CMakeFiles/desomi_core.dir/renderer/src/bfs.cc.o desomi/core/CMakeFiles/desomi_core.dir/renderer/src/sdl_api.cc.o desomi/core/CMakeFiles/desomi_core.dir/utils/src/utils.cpp.o desomi/core/CMakeFiles/desomi_core.dir/window/src/window.cpp.o desomi/core/CMakeFiles/desomi_core.dir/plugins/src/manager.cc.o desomi/core/CMakeFiles/desomi_core.dir/plugins/src/vsync.cc.o
+build desomi/core/libdesomi_core.so: CXX_SHARED_LIBRARY_LINKER__desomi_core_Debug desomi/core/CMakeFiles/desomi_core.dir/node/src/rect_node.cc.o desomi/core/CMakeFiles/desomi_core.dir/node/src/root.cc.o desomi/core/CMakeFiles/desomi_core.dir/renderer/src/bfs.cc.o desomi/core/CMakeFiles/desomi_core.dir/renderer/src/sdl_api.cc.o desomi/core/CMakeFiles/desomi_core.dir/utils/src/utils.cpp.o desomi/core/CMakeFiles/desomi_core.dir/window/src/window.cpp.o desomi/core/CMakeFiles/desomi_core.dir/plugins/src/manager.cc.o
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = -lSDL2  -lSDL2_image
   OBJECT_DIR = desomi/core/CMakeFiles/desomi_core.dir

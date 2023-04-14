@@ -1,6 +1,6 @@
-#include "core/plugins/manager.hpp"
+#include "core/plugins/templates/manager.hpp"
 
-using desomi::core::plugins::PluginManager;
+namespace desomi::core::plugins {
 
 void PluginManager::on_window_create(interfaces::Inode::node_ptr& root) {
   for (auto& plugin : plugins_) {
@@ -31,3 +31,5 @@ void PluginManager::on_frame_end(interfaces::Inode::node_ptr& root) {
     plugin->on_frame_end(root);
   }
 }
+
+}  // namespace desomi::core::plugins

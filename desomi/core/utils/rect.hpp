@@ -19,6 +19,7 @@ class Rect {
 
   ~Rect() = default;
 
+  // TODO: Problem with this function that it only works for SDL2
   [[nodiscard]] inline SDL_Rect sdl_rect() const {
     return SDL_Rect{x_, y_, width_, height_};
   }

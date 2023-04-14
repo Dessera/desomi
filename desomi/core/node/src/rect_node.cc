@@ -1,6 +1,6 @@
 #include "core/node/templates/rect_node.hpp"
 
-using desomi::core::node::RectNode;
+namespace desomi::core::node {
 
 RectNode::RectNode(utils::Rect rect, utils::Color color)
     : rect_(rect), color_(color) {}
@@ -15,3 +15,5 @@ void RectNode::render(interfaces::IrendererAPI* renderer) {
   renderer->fill_rect(rect_);
   renderer->default_draw_color();
 }
+
+}  // namespace desomi::core::node
