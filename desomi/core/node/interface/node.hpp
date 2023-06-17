@@ -51,7 +51,7 @@ class Inode : public std::enable_shared_from_this<Inode> {
    * @return node_ptr self pointer for chaining.
    */
   inline node_ptr add_child_impl_(const node_ptr& child) {
-    children_.push_back(child->shared_from_this());
+    children_.push_back(child);
     child->set_parent(this);
     return this->shared_from_this();
   }

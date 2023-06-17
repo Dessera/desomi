@@ -2,6 +2,9 @@
 
 #include <SDL2/SDL.h>
 
+#include <cstdlib>
+#include <iostream>
+
 #include "SDL2/SDL_events.h"
 #include "core/node/templates/root.hpp"
 #include "core/renderer/api/sdl_api.hpp"
@@ -11,16 +14,16 @@
 namespace desomi::core {
 Window::Window(WindowConfig config, const root_init_func& root,
                const plugin_init_func& plugin)
-    : config_{std::move(config)} {
-  // TODO: This should be non-static.
-  renderer_ =
-      RendererFactory<render::RendererBFS, render::SDL_RenderAPI>::create(
-          config_);
-  root_ = root(config_);
-  plugins_ = plugin();
-
+    : config_{std::move(config)},
+      // TODO: This should be non-static.
+      renderer_(
+          RendererFactory<render::RendererBFS, render::SDL_RenderAPI>::create(
+              config_)),
+      root_(root(config_)),
+      plugins_(plugin()) {
   plugins_->on_window_create(root_);
 }
+
 Window::Window(WindowConfig config)
     : Window{std::move(config),
              [](const WindowConfig& config) {

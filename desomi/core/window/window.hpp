@@ -67,6 +67,13 @@ class Window : public utils::UseSingletonCreate<Window> {
 
  private:
   /**
+   * @brief A common config for the window
+   *        Config cann
+   *
+   */
+  const WindowConfig config_;
+  
+  /**
    * @brief Renderer that derived from Irenderer
    *        The renderer is used to render the scene.
    *        And Irenderer is an interface of the renderer, including all api and
@@ -85,13 +92,6 @@ class Window : public utils::UseSingletonCreate<Window> {
    *
    */
   interfaces::Iplugin::plugin_ptr plugins_;
-
-  /**
-   * @brief A common config for the window
-   *        Config cann
-   *
-   */
-  const WindowConfig config_;
 
   /**
    * @brief Construct a new Window object
